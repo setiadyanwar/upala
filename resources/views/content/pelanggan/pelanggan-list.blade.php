@@ -26,7 +26,7 @@
 
 @section('content')
 <h4 class="py-3 mb-4">
-  <span class="text-muted fw-light">Produk /</span> List Produk
+  <span class="text-muted fw-light">Pelanggan /</span> List Pelanggan
 </h4>
 
 <!-- Product List Widget -->

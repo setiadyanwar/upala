@@ -69,17 +69,17 @@
     {
       "name": "Data Pelanggan",
       "icon": "menu-icon tf-icons ti ti-users",
-      "slug": "app-ecommerce-product",
+      "slug": "pelanggan",
       "submenu": [
         {
-          "url": "app/ecommerce/product/list",
+          "url": "pelanggan",
           "name": "List Pelanggan",
-          "slug": "app-ecommerce-product-list"
+          "slug": "pelanggan-list"
         },
         {
-          "url": "app/ecommerce/product/add",
+          "url": "pelanggan/create",
           "name": "Tambah Pelanggan",
-          "slug": "app-ecommerce-product-add"
+          "slug": "pelanggan-add"
         }
       ]
     },
