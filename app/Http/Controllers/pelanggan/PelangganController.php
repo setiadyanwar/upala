@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\pelanggan;
 
 use App\Http\Controllers\Controller;
+use App\Models\MasterPelanggan;
 use Illuminate\Http\Request;
 
 class PelangganController extends Controller
@@ -20,7 +21,8 @@ class PelangganController extends Controller
      */
     public function create()
     {
-        return view('content.pelanggan.pelanggan-add');
+        $mode = 'add';
+        return view('content.pelanggan.pelanggan-add', compact('mode'));
     }
 
     /**
@@ -28,7 +30,26 @@ class PelangganController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $validatedData = $request->validate([
+                'nama_pelanggan' => 'required',
+                'email' => 'nullable|email',
+                'nomor_telepon' => 'nullable'
+            ]);
+
+            MasterPelanggan::create([
+                'nama' => $validatedData['nama_pelanggan'],
+                'email' => $validatedData['email'],
+                'no_telp' => $validatedData['nomor_telepon'],
+                // 'registered_by' => auth()->user()->id,
+                'registered_by' => 1,
+                'registered_at' => now()
+            ]);
+
+            return redirect()->route('pelanggan.index')->with('success', 'Pelanggan berhasil ditambahkan');
+        }catch(\Exception $e){
+            return redirect()->route('pelanggan.index')->with('error', 'Pelanggan gagal ditambahkan');
+        }
     }
 
     /**
@@ -44,7 +65,9 @@ class PelangganController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $mode = 'edit';
+        $pelanggan = MasterPelanggan::find($id);
+        return view('content.pelanggan.pelanggan-add', compact('mode', 'pelanggan'));
     }
 
     /**
@@ -52,7 +75,27 @@ class PelangganController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        try{
+            $validatedData = $request->validate([
+                'nama_pelanggan' => 'required',
+                'email' => 'nullable|email',
+                'nomor_telepon' => 'nullable'
+            ]);
+
+            $pelanggan = MasterPelanggan::find($id);
+
+            if(!$pelanggan) return redirect()->route('pelanggan.index')->with('error', 'Pelanggan tidak ditemukan');
+
+            $pelanggan->update([
+                'nama' => $validatedData['nama_pelanggan'],
+                'email' => $validatedData['email'],
+                'no_telp' => $validatedData['nomor_telepon']
+            ]);
+
+            return redirect()->route('pelanggan.index')->with('success', 'Pelanggan berhasil diubah');
+        }catch(\Exception $e){
+            return redirect()->route('pelanggan.index')->with('error', 'Pelanggan gagal diubah');
+        }
     }
 
     /**
@@ -60,6 +103,21 @@ class PelangganController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try{
+            $pelanggan = MasterPelanggan::find($id);
+
+            if(!$pelanggan) return redirect()->route('pelanggan.index')->with('error', 'Pelanggan tidak ditemukan');
+
+            $pelanggan->delete();
+
+            return redirect()->route('pelanggan.index')->with('success', 'Pelanggan berhasil dihapus');
+        }catch(\Exception $e){
+            return redirect()->route('pelanggan.index')->with('error', 'Pelanggan gagal dihapus');
+        }
+    }
+
+    public function api_get_pelanggan(){
+        $pelanggan = MasterPelanggan::all();
+        return response()->json(['data' => $pelanggan]);
     }
 }

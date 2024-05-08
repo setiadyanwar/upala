@@ -86,17 +86,17 @@
     {
       "name": "Data Akun Karyawan",
       "icon": "menu-icon tf-icons ti ti-users",
-      "slug": "app-ecommerce-product",
+      "slug": "karyawan",
       "submenu": [
         {
-          "url": "app/ecommerce/product/list",
+          "url": "karyawan",
           "name": "List Akun Karyawan",
-          "slug": "app-ecommerce-product-list"
+          "slug": "karyawan-list"
         },
         {
-          "url": "app/ecommerce/product/add",
+          "url": "karyawan/create",
           "name": "Tambah Akun Karyawan",
-          "slug": "app-ecommerce-product-add"
+          "slug": "karyawan-add"
         }
       ]
     }

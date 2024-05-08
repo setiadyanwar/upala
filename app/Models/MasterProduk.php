@@ -10,6 +10,6 @@ class MasterProduk extends Model
     use HasFactory;
 
     protected $table = 'master_produk';
-    protected $fillable = ['nama', 'deskripsi', 'tipe'];
+    protected $fillable = ['nama', 'deskripsi', 'tipe', 'file'];
     
 }

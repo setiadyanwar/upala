@@ -95,9 +95,7 @@
   <div class="card-header">
     <h5 class="card-title mb-0">Filter</h5>
     <div class="d-flex justify-content-between align-items-center row py-3 gap-3 gap-md-0">
-      <div class="col-md-4 product_status"></div>
       <div class="col-md-4 product_category"></div>
-      <div class="col-md-4 product_stock"></div>
     </div>
   </div>
   <div class="card-datatable table-responsive">
@@ -115,5 +113,5 @@
     </table>
   </div>
 </div>
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 @endsection

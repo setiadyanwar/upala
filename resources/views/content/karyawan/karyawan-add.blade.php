@@ -34,11 +34,11 @@
 
 @section('content')
 <h4 class="py-3 mb-0">
-  <span class="text-muted fw-light">Pelanggan /</span><span class="fw-medium">  {{ $mode == 'add' ? 'Tambah' : 'Edit' }} Pelanggan</span>
+  <span class="text-muted fw-light">Karyawan /</span><span class="fw-medium">  {{ $mode == 'add' ? 'Tambah' : 'Edit' }} Karyawan</span>
 </h4>
 
 <div class="app-ecommerce">
-  <form action="{{ $mode == 'add' ? route('pelanggan.store') : route('pelanggan.update', ['pelanggan' => $pelanggan->id]) }}" method="POST" id="add-pelanggan" enctype="multipart/form-data">
+  <form action="{{ $mode == 'add' ? route('karyawan.store') : route('karyawan.update', ['karyawan' => $karyawan->id]) }}" method="POST" id="add-karyawan" enctype="multipart/form-data">
     @csrf
     @if($mode == 'edit')
       @method('PUT')
@@ -47,10 +47,10 @@
   <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3">
 
     <div class="d-flex flex-column justify-content-center">
-      <h4 class="mb-1 mt-3"> {{ $mode == 'add' ? 'Tambah' : 'Edit' }} Pelanggan</h4>
+      <h4 class="mb-1 mt-3"> {{ $mode == 'add' ? 'Tambah' : 'Edit' }} Karyawan</h4>
     </div>
     <div class="d-flex align-content-center flex-wrap gap-3">
-       <button type="submit" class="btn btn-primary">Simpan Pelanggan</button>
+       <button type="submit" class="btn btn-primary">Simpan Karyawan</button>
     </div>
 
   </div>
@@ -62,18 +62,25 @@
       <!-- Product Information -->
       <div class="card mb-4">
         <div class="card-header">
-          <h5 class="card-tile mb-0">Informasi Pelanggan</h5>
+          <h5 class="card-tile mb-0">Informasi Karyawan</h5>
         </div>
         <div class="card-body">
           <div class="mb-3">
             <label class="form-label" for="ecommerce-product-name">Nama</label>
-            <input type="text" class="form-control" id="ecommerce-product-name" placeholder="Nama Pelanggan" value="{{ $mode == 'edit' ? $pelanggan->nama : '' }}" name="nama_pelanggan" aria-label="Product title">
+            <input type="text" class="form-control" id="ecommerce-product-name" placeholder="Nama Karyawan" value="{{ $mode == 'edit' ? $karyawan->name : '' }}" name="nama_karyawan" aria-label="Nama Karyawan">
           </div>
           <div class="row mb-3">
             <div class="col"><label class="form-label" for="ecommerce-product-sku">Email</label>
-              <input type="email" class="form-control" id="ecommerce-product-sku" placeholder="Email" name="email"  value="{{ $mode == 'edit' ? $pelanggan->email : '' }}" aria-label="Email"></div>
-            <div class="col"><label class="form-label" for="ecommerce-product-barcode">Nomor Telepon</label>
-              <input type="text" class="form-control" id="ecommerce-product-barcode" placeholder="Nomor Telepon" name="nomor_telepon"  value="{{ $mode == 'edit' ? $pelanggan->no_telp : '' }}" aria-label="Nomor Telepon"></div>
+              <input type="email" class="form-control" id="ecommerce-product-sku" placeholder="Email" name="email"  value="{{ $mode == 'edit' ? $karyawan->email : '' }}" aria-label="Email"></div>
+            <div class="col"><label class="form-label" for="ecommerce-product-barcode">Password</label>
+              <input type="text" class="form-control" id="ecommerce-product-barcode" placeholder="Password" name="password"  aria-label="Password"></div>
+              <div class="col"><label class="form-label" for="ecommerce-product-barcode">Role</label>
+              <select id="form-repeater-1-1" name="role" class="select2 form-select" data-placeholder="Pilih Role">
+                  <option value="">Pilih Role</option>
+                  @foreach($role as $r)
+                  <option value="{{ $r->id }}" {{ $mode == 'edit' && $r->id == $karyawan->role_id ? 'selected' : '' }}>{{ $r->nama }}</option>
+                  @endforeach
+              </select>
           </div>
         </div>
       </div>

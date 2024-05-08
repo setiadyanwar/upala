@@ -157,6 +157,7 @@ use App\Http\Controllers\tables\DatatableAdvanced;
 use App\Http\Controllers\tables\DatatableExtensions;
 use App\Http\Controllers\charts\ApexCharts;
 use App\Http\Controllers\charts\ChartJs;
+use App\Http\Controllers\pegawai\KaryawanController;
 use App\Http\Controllers\maps\Leaflet;
 use App\Http\Controllers\pelanggan\PelangganController;
 use App\Http\Controllers\produk\MasterProdukController;
@@ -175,6 +176,9 @@ Route::resource('produk', MasterProdukController::class);
 
 // Pelanggan
 Route::resource('pelanggan', PelangganController::class);
+
+// User Management
+Route::resource('karyawan', KaryawanController::class);
 
 // layout
 Route::get('/layouts/collapsed-menu', [CollapsedMenu::class, 'index'])->name('layouts-collapsed-menu');
