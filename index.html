@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upala Coffee</title>
+
+    <link rel="stylesheet" href="dist/output.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <!-- Header START -->
+     <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#"><img src="dist/image/logo.png" class="py-6 max-w-[120px] lg:max-w-full cursor-pointer" alt="logo-upala"></a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full 
+                    lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group"><a href="#home" class="text-lg text-white py-2 mx-5 flex group-hover:text-primary">Home</a></li>
+                            <li class="group"><a href="#menu" class="text-lg text-white py-2 mx-5 flex group-hover:text-primary">Menu</a></li>
+                            <li class="group"><a href="#about" class="text-lg text-white py-2 mx-5 flex group-hover:text-primary">About</a></li>
+                            <li class="group"><a href="#contact" class="text-lg text-white py-2 mx-5 flex group-hover:text-primary">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HERO SECTION START -->
+    <section id="home" class="pt-36 h-[845px] bg-cover bg-center" style="background-image: url('dist/image/banner.png');">
+        <div class="w-full h-full flex items-center justify-center">
+            <!-- Content goes here -->
+            <div class="text-center text-white -mt-48">
+                <p class="text-sm mb-2">Jatiwaringin located at Jl. Gamprit Raya No.29,.</p>
+                <h1 class="lg:text-6xl text-5xl font-bold mb-4 text-transparent bg-gradient-to-br from-primary to-state bg-clip-text">Welcome to <br> UPALA COFFEE</h1>
+                <p class="text-base mb-24">Objek wisata kuliner dan tempat nongkrong yang nyaman dan<br>Instagramable di Bekasi</p>
+                <div class="flex items-center justify-center">
+                    <a href="#menu" class="bg-cover bg-center bg-no-repeat text-white py-2 px-6 rounded-full flex items-center justify-center animate-spin-slow" style="background-image: url('dist/image/spin.png'); width: 100px; height: 100px;">
+                      <i class="fas fa-arrow-down text-xl"></i>
+                    </a>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <!-- HERO SECTION FINISH -->
+
+</body>
+<!-- JS -->
+<script src="dist/js/script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+
+</html>
