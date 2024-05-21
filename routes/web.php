@@ -161,6 +161,8 @@ use App\Http\Controllers\pegawai\KaryawanController;
 use App\Http\Controllers\maps\Leaflet;
 use App\Http\Controllers\pelanggan\PelangganController;
 use App\Http\Controllers\produk\MasterProdukController;
+use App\Http\Controllers\notifikasi\MasterPushNotifikasiController;
+use App\Http\Controllers\order\OrderController;
 
 // Main Page Route
 Route::get('/', [Analytics::class, 'index'])->name('dashboard-analytics');
@@ -179,6 +181,12 @@ Route::resource('pelanggan', PelangganController::class);
 
 // User Management
 Route::resource('karyawan', KaryawanController::class);
+
+// Notifikasi
+Route::resource('notifikasi', MasterPushNotifikasiController::class);
+
+// Order
+Route::resource('order', OrderController::class);
 
 // layout
 Route::get('/layouts/collapsed-menu', [CollapsedMenu::class, 'index'])->name('layouts-collapsed-menu');

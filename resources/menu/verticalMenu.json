@@ -12,17 +12,17 @@
     {
       "name": "Order",
       "icon": "menu-icon tf-icons ti ti-layout-grid",
-      "slug": "app-order",
+      "slug": "order",
       "submenu": [
         {
-          "url": "app/ecommerce/product/list",
+          "url": "order",
           "name": "List Order",
-          "slug": "app-order-list"
+          "slug": "order-list"
         },
         {
-          "url": "app/ecommerce/product/add",
+          "url": "order/create",
           "name": "Tambah Order",
-          "slug": "app-order-list"
+          "slug": "order-list"
         }
       ]
     },
@@ -32,17 +32,22 @@
     {
       "name": "Push Notifikasi",
       "icon": "menu-icon tf-icons ti ti-layout-grid",
-      "slug": "app-ecommerce-product",
+      "slug": "notifikasi",
       "submenu": [
         {
           "url": "app/ecommerce/product/list",
-          "name": "List Notifikasi",
-          "slug": "app-ecommerce-product-list"
+          "name": "Performa Notifikasi",
+          "slug": "notifikasi-list"
         },
         {
-          "url": "app/ecommerce/product/add",
+          "url": "notifikasi",
+          "name": "List Notifikasi",
+          "slug": "notifikasi-list"
+        },
+        {
+          "url": "notifikasi/create",
           "name": "Tambah Notifikasi",
-          "slug": "app-ecommerce-product-add"
+          "slug": "notifikasi-add"
         }
       ]
     },

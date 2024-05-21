@@ -10,4 +10,9 @@ class CustomerOrder extends Model
     use HasFactory;
 
     protected $fillable = ['bill_id', 'produk_id', 'qty', 'condition', 'level'];
+
+    public function produk()
+    {
+        return $this->belongsTo(MasterProduk::class, 'produk_id');
+    }
 }

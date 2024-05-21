@@ -95,8 +95,6 @@ class MasterProdukController extends Controller
             $produk = MasterProduk::find($id);
     
             if($produk == null){
-            dd('err');
-
                 return redirect()->route('produk.index')->with('error', 'Produk tidak ditemukan');
             }
     
