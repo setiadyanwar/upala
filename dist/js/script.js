@@ -10,12 +10,31 @@ window.onscroll = function () {
   }
 };
 
-//  Hamburger
+// Hamburger
 
 const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#nav-menu");
+const navLinks = navMenu.querySelectorAll("li a");
 
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("hamburger-active");
   navMenu.classList.toggle("hidden");
+
+  // Check the current URL
+  const currentUrl = window.location.pathname;
+
+  navLinks.forEach(link => {
+    // Get the href attribute of each link
+    const linkHref = link.getAttribute('href');
+    
+    if (currentUrl.includes('index.html') && linkHref === 'index.html') {
+      link.classList.toggle("text-white");
+      link.classList.toggle("text-dark");
+    } else {
+      // Remove the 'text-dark' class if not on the Home page
+      link.classList.remove("text-dark");
+      // Add the 'text-white' class to all links
+      link.classList.add("text-dark");
+    }
+  });
 });
