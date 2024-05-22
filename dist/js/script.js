@@ -38,3 +38,19 @@ hamburger.addEventListener("click", function () {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      grabCursor: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+  });
+});

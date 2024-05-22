@@ -4,7 +4,7 @@
   }
 
   .animate-spin-slow {
-    animation: spin 3s linear infinite;
+    animation: spin 5s linear infinite;
   }
 
   .navbar-fixed {
@@ -61,7 +61,8 @@
   .active-link {
     position:relative;
     color: #EF5B38;
-    font-weight: bold; /* Ganti dengan warna primary Anda */
+    font-weight: bold;
+    border-bottom: 2px solid #EF5B38;
 }
 
 .active-link::after {

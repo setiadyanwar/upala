@@ -19,8 +19,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Swiper js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
-<body>
+<body style="background-color: #fafafa;">
 
      <!-- Header START -->
      <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
@@ -73,9 +75,36 @@
     <!-- TOP MENU SECTION START -->
     <section id="top-menu">
         <div class="container">
-            <h2>TOP MENU</h2>
+            <h2 class="text-5xl text-right font-extrabold text-primary">TOP MENU</h2>
         </div>
-        
+        <div class="container">
+            <!-- Slider main container -->
+            <div class="swiper-container w-80 h-52 relative mt-20 inline-block">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="bg-white w-80 h-52 shadow-lg rounded-lg p-6">
+                            <!-- Content of the first card -->
+                            <p>Content 1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide mx-8">
+                        <div class="bg-white w-80 h-52 shadow-lg rounded-lg p-6">
+                            <!-- Content of the second card -->
+                            <p>Content 2</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="bg-white w-80 h-52 shadow-lg rounded-lg p-6">
+                            <!-- Content of the third card -->
+                            <p>Content 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="absolute z-9999 w-60 lg:w-[400px] h-auto -mt-52" src="dist/image/pelangi.png" alt="">
     </section>
     <!-- TOP MENU SECTION FINISH -->
 
@@ -90,6 +119,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     
 
 </html>
