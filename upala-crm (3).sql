@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 21 Bulan Mei 2024 pada 07.59
+-- Waktu pembuatan: 27 Bulan Mei 2024 pada 08.43
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.1.17
 
@@ -112,7 +112,10 @@ CREATE TABLE `master_pelanggan` (
 --
 
 INSERT INTO `master_pelanggan` (`id`, `nama`, `email`, `no_telp`, `registered_by`, `registered_at`, `created_at`, `updated_at`) VALUES
-(2, 'ekky', 'admin@gmail.com', '08788312222', '1', '2024-05-08 01:05:05', '2024-05-08 01:05:05', '2024-05-08 01:05:05');
+(2, 'Rahmat', 'muhammaryadi@gmail.com', '08788312222', '1', '2024-05-22 07:07:11', '2024-05-08 01:05:05', '2024-05-22 00:07:11'),
+(3, 'Saniyyah', 'saniyyah2106@gmail.com', '087788844717', '1', '2024-05-22 00:09:39', '2024-05-22 00:09:39', '2024-05-22 00:09:39'),
+(4, 'Akil ganteng', 'ibnuaqil2004@gmail.com', '089654902861', '1', '2024-05-22 00:10:37', '2024-05-22 00:10:37', '2024-05-22 00:10:37'),
+(5, 'alya', 'alyaptrs12@gmail.com', '085591252522', '1', '2024-05-24 23:10:46', '2024-05-24 23:10:46', '2024-05-24 23:10:46');
 
 -- --------------------------------------------------------
 
@@ -169,10 +172,47 @@ CREATE TABLE `notification_target_histories` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `notification_id` bigint(20) UNSIGNED NOT NULL,
   `cust_id` bigint(20) UNSIGNED NOT NULL,
+  `via_wa` int(11) NOT NULL DEFAULT 0,
+  `via_email` int(11) NOT NULL DEFAULT 0,
   `is_success` tinyint(1) NOT NULL,
+  `sent_date` datetime NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `notification_target_histories`
+--
+
+INSERT INTO `notification_target_histories` (`id`, `notification_id`, `cust_id`, `via_wa`, `via_email`, `is_success`, `sent_date`, `created_at`, `updated_at`) VALUES
+(1, 1, 2, 0, 1, 1, '2024-04-22 12:06:15', '2024-05-21 02:47:52', '2024-05-21 02:47:52'),
+(5, 1, 2, 0, 1, 0, '2024-04-22 12:06:15', '2024-05-21 03:19:22', '2024-05-21 03:19:22'),
+(6, 1, 2, 0, 1, 1, '2024-04-22 12:06:15', '2024-05-21 03:24:32', '2024-05-21 03:24:32'),
+(7, 1, 2, 0, 1, 1, '2024-04-22 12:06:15', '2024-05-21 03:25:27', '2024-05-21 03:25:27'),
+(8, 1, 2, 0, 1, 0, '2024-04-22 12:06:15', '2024-05-21 03:26:01', '2024-05-21 03:26:01'),
+(9, 1, 2, 0, 1, 0, '2024-04-22 12:06:15', '2024-05-21 03:27:31', '2024-05-21 03:27:31'),
+(10, 1, 2, 0, 1, 0, '2024-04-22 12:06:15', '2024-05-21 03:33:07', '2024-05-21 03:33:07'),
+(11, 1, 2, 0, 1, 0, '2024-04-22 12:06:15', '2024-05-21 03:36:16', '2024-05-21 03:36:16'),
+(12, 1, 2, 0, 1, 0, '2024-04-22 12:06:15', '2024-05-21 03:40:12', '2024-05-21 03:40:12'),
+(14, 1, 2, 0, 1, 1, '2024-04-22 12:06:15', '2024-05-21 03:44:02', '2024-05-21 03:44:08'),
+(15, 1, 2, 0, 0, 0, '2024-05-22 07:01:51', '2024-05-22 00:01:51', '2024-05-22 00:01:51'),
+(16, 1, 2, 0, 0, 0, '2024-05-22 07:02:47', '2024-05-22 00:02:47', '2024-05-22 00:02:47'),
+(17, 1, 2, 0, 1, 0, '2024-05-22 07:05:33', '2024-05-22 00:05:33', '2024-05-22 00:05:33'),
+(18, 2, 2, 0, 1, 1, '2024-05-22 07:19:32', '2024-05-22 00:19:32', '2024-05-22 00:19:40'),
+(19, 2, 3, 0, 1, 1, '2024-05-22 07:19:32', '2024-05-22 00:19:40', '2024-05-22 00:19:43'),
+(20, 2, 4, 0, 1, 1, '2024-05-22 07:19:32', '2024-05-22 00:19:43', '2024-05-22 00:19:45'),
+(21, 2, 4, 0, 1, 0, '2024-05-22 07:42:41', '2024-05-22 00:42:41', '2024-05-22 00:42:41'),
+(22, 2, 4, 0, 1, 0, '2024-05-22 07:43:41', '2024-05-22 00:43:41', '2024-05-22 00:43:41'),
+(23, 2, 4, 0, 1, 1, '2024-05-22 07:48:01', '2024-05-22 00:48:01', '2024-05-22 00:48:07'),
+(24, 1, 4, 0, 1, 1, '2024-05-22 08:08:48', '2024-05-22 01:08:48', '2024-05-22 01:08:55'),
+(25, 2, 2, 0, 1, 1, '2024-05-25 06:15:56', '2024-05-24 23:15:56', '2024-05-24 23:15:59'),
+(26, 2, 3, 0, 1, 1, '2024-05-25 06:15:56', '2024-05-24 23:15:59', '2024-05-24 23:16:00'),
+(27, 2, 4, 0, 1, 1, '2024-05-25 06:15:56', '2024-05-24 23:16:00', '2024-05-24 23:16:02'),
+(28, 2, 5, 0, 1, 1, '2024-05-25 06:15:56', '2024-05-24 23:16:02', '2024-05-24 23:16:03'),
+(29, 1, 2, 0, 1, 1, '2024-05-25 06:17:16', '2024-05-24 23:17:16', '2024-05-24 23:17:20'),
+(30, 1, 3, 0, 1, 1, '2024-05-25 06:17:16', '2024-05-24 23:17:20', '2024-05-24 23:17:23'),
+(31, 1, 4, 0, 1, 1, '2024-05-25 06:17:16', '2024-05-24 23:17:23', '2024-05-24 23:17:25'),
+(32, 1, 5, 0, 1, 1, '2024-05-25 06:17:16', '2024-05-24 23:17:25', '2024-05-24 23:17:27');
 
 -- --------------------------------------------------------
 
@@ -226,7 +266,8 @@ CREATE TABLE `push_notifications` (
 --
 
 INSERT INTO `push_notifications` (`id`, `title`, `message`, `notification_type`, `media_attachment`, `created_at`, `updated_at`) VALUES
-(1, 'Test Notifikasi', '<p>test notifikasi</p>', '1', '1715224599.jpg', '2024-05-08 20:16:39', '2024-05-08 22:00:20');
+(1, 'Test Notifikasi', '<p>🤩🤩🤩🤩🤩🤩🤩🤩🤩🤩🤩🤩🤩</p><p><strong>ASEKK</strong></p><p>Testttttttt</p>', '1', '1715224599.jpg', '2024-05-08 20:16:39', '2024-05-22 01:08:24'),
+(2, 'Promotion New Product Upala', '<p>Perkenalkan Promo baru dari Upala Cafe, Koffe Luwak Hazelnut</p><p><br></p>', '1', '1716361968.jpeg', '2024-05-22 00:12:49', '2024-05-22 01:00:49');
 
 -- --------------------------------------------------------
 
@@ -273,7 +314,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `role_id`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'ekky', 'ekky@gmail.com', 1, NULL, '$2y$12$NCrLHc8AGzMwAxMPOGr7VO/DAwUBI8hsl8ZaxS7gc8yc1VSSXhreq', NULL, '2024-05-08 02:07:22', '2024-05-08 09:17:33');
+(2, 'Rahmat', 'muhammaryadi@gmail.com', 1, NULL, '$2y$12$mgRaZMVY9U69vKK7.vszKevA0J2iSdJNOOQQaeQj8N53nvXh6Q4EO', NULL, '2024-05-08 02:07:22', '2024-05-22 03:19:28'),
+(3, 'Akil', 'ibnuaqil2004@gmail.com', 2, NULL, '$2y$12$46vWDB327XtRKRsPZ6InMOKnoyF1q3P67clMyyxK2GOjQcNA9XE7W', NULL, '2024-05-22 03:19:21', '2024-05-22 03:19:21'),
+(4, 'Ekky', 'ekky.mulialasardi@gmail.com', 3, NULL, '$2y$12$ocujB5ffbsf3GB2ak4hJX.P4VSZn7VcLRtYErlASIKbeihUnqAGy6', NULL, '2024-05-22 03:19:40', '2024-05-22 03:19:40');
 
 --
 -- Indexes for dumped tables
@@ -387,7 +430,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT untuk tabel `master_pelanggan`
 --
 ALTER TABLE `master_pelanggan`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `master_produk`
@@ -405,7 +448,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `notification_target_histories`
 --
 ALTER TABLE `notification_target_histories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
@@ -417,7 +460,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `push_notifications`
 --
 ALTER TABLE `push_notifications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `roles`
@@ -429,7 +472,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

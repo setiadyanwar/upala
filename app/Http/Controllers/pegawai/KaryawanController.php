@@ -14,7 +14,8 @@ class KaryawanController extends Controller
      */
     public function index()
     {
-        return view('content.karyawan.karyawan-list');
+        $count = User::count();
+        return view('content.karyawan.karyawan-list', compact('count'));
     }
 
     /**

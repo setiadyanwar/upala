@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\notifikasi\MasterPushNotifikasiController;
+use App\Http\Controllers\notifikasi\PerformaNotifikasiController;
 use App\Http\Controllers\order\OrderController;
 use App\Http\Controllers\pegawai\KaryawanController;
 use App\Http\Controllers\pelanggan\PelangganController;
@@ -27,4 +28,5 @@ Route::get('/produk', [MasterProdukController::class, 'api_get_produk'])->name('
 Route::get('/pelanggan', [PelangganController::class, 'api_get_pelanggan'])->name('api-get-pelanggan');
 Route::get('/karyawan', [KaryawanController::class, 'api_get_karyawan'])->name('api-get-karyawan');
 Route::get('/notifikasi', [MasterPushNotifikasiController::class, 'api_get_notifikasi'])->name('api-get-notifikasi');
+Route::get('/performa-notifikasi', [PerformaNotifikasiController::class, 'api_get_performa_notifikasi'])->name('api-get-performa-notifikasi');
 Route::get('/order', [OrderController::class, 'api_get_order'])->name('api-get-order');

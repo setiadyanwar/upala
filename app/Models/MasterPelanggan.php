@@ -11,4 +11,8 @@ class MasterPelanggan extends Model
 
     protected $table = 'master_pelanggan';
     protected $fillable = ['nama', 'email', 'no_telp', 'registered_by', 'registered_at'];
+
+    public function orders(){
+        return $this->hasMany(CustomerBill::class, 'pelanggan_id', 'id');
+    }
 }

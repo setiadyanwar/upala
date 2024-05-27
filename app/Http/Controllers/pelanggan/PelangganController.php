@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\pelanggan;
 
 use App\Http\Controllers\Controller;
+use App\Models\CustomerBill;
 use App\Models\MasterPelanggan;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,8 @@ class PelangganController extends Controller
      */
     public function index()
     {
-        return view('content.pelanggan.pelanggan-list');
+        $count = MasterPelanggan::count();
+        return view('content.pelanggan.pelanggan-list', compact('count'));
     }
 
     /**
@@ -116,8 +118,40 @@ class PelangganController extends Controller
         }
     }
 
-    public function api_get_pelanggan(){
-        $pelanggan = MasterPelanggan::all();
-        return response()->json(['data' => $pelanggan]);
+    public function api_get_pelanggan(Request $request){
+        $jumlahTerakhirKunjungan = $request->query('jumlahTerakhirKunjungan', null);
+        $umurMember = $request->query('umurMember', null);
+        $dalamPeriode = $request->query('dalamPeriode', null);
+
+        // Build your query logic here based on the parameters
+        $query = MasterPelanggan::query();
+
+        if (!is_null($jumlahTerakhirKunjungan)) {
+            $query->whereHas('orders', function($q) use ($jumlahTerakhirKunjungan) {
+                $q->groupBy('pelanggan_id')
+                    ->havingRaw('COUNT(*) >= ?', [$jumlahTerakhirKunjungan]);
+            });
+        }
+
+        if (!is_null($umurMember)) {
+            $startDate = now()->subDays($umurMember);
+            $query->where('created_at', '<=', $startDate);
+        }
+
+        if (!is_null($dalamPeriode)) {
+            $startDate = now()->subDays($dalamPeriode);
+            
+            $orderIds = CustomerBill::where('created_at', '>=', $startDate)->pluck('id')->toArray();
+            
+            $query->whereHas('orders', function($q) use ($orderIds) {
+                $q->whereIn('id', $orderIds);
+            });
+        }
+
+        $pelanggan = $query->get();
+
+        return response()->json([
+            'data' => $pelanggan
+        ]);
     }
 }

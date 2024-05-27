@@ -299,6 +299,12 @@
 
   // Generated Leads Chart
   // --------------------------------------------------------------------
+  const generatedLeadsChart = document.querySelector('#generatedLeadsChart');
+
+// Get data attributes
+const leads = generatedLeadsChart.dataset.template; // "100"
+const sent = generatedLeadsChart.dataset.sent;
+
   const generatedLeadsChartEl = document.querySelector('#generatedLeadsChart'),
     generatedLeadsChartConfig = {
       chart: {
@@ -307,8 +313,8 @@
         parentHeightOffset: 0,
         type: 'donut'
       },
-      labels: ['Electronic', 'Sports', 'Decor', 'Fashion'],
-      series: [45, 58, 30, 50],
+      labels: ['Notifikasi Template'],
+      series: [leads],
       colors: [
         chartColors.donut.series1,
         chartColors.donut.series2,
@@ -369,10 +375,10 @@
                 showAlways: true,
                 color: config.colors.success,
                 fontSize: '.8125rem',
-                label: 'Total',
+                label: 'Template',
                 fontFamily: 'Public Sans',
                 formatter: function (w) {
-                  return '184';
+                  return leads;
                 }
               }
             }

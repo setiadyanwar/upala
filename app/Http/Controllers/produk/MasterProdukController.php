@@ -13,7 +13,8 @@ class MasterProdukController extends Controller
      */
     public function index()
     {
-        return view('content.produk.product-list');
+        $count = MasterProduk::count();
+        return view('content.produk.product-list', compact('count'));
     }
 
     /**

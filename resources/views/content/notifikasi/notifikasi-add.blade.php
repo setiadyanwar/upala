@@ -72,20 +72,10 @@
           <div>
             <label class="form-label">Content</label>
             <div class="form-control p-0 pt-1">
-              <div class="comment-toolbar border-0 border-bottom">
-                <div class="d-flex justify-content-start">
-                  <span class="ql-formats me-0">
-                    <button class="ql-bold"></button>
-                    <button class="ql-italic"></button>
-                    <button class="ql-underline"></button>
-                    <button class="ql-list" value="ordered"></button>
-                    <button class="ql-list" value="bullet"></button>
-                    <button class="ql-link"></button>
-                    <button class="ql-image"></button>
-                  </span>
-                </div>
+              <div class=" border-0 border-bottom">
+               
               </div>
-              <div class="comment-editor border-0 pb-4" id="ecommerce-category-description">
+              <div class=" border-0 pb-4" id="ecommerce-category-description">
               </div>
 
             </div>
@@ -128,9 +118,15 @@
 
     @if($mode == 'edit')
     var quill = new Quill('#ecommerce-category-description', {
-      theme: 'snow'
+      theme: 'snow',
+      modules: {
+        toolbar: [
+          [{ header: [1, 2, false] }],
+          ['bold', 'italic', 'underline'],
+        ],
+      },
     });
-    quill.root.innerHTML = "{!! $notifikasi->message !!}";
+    quill.root.innerHTML = `{!! $notifikasi->message !!}`;
     @endif
   });
 

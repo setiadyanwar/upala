@@ -1,16 +1,12 @@
 {
   "menu": [
     {
-      "url": "app/ecommerce/dashboard",
-      "name":"Dashboard",
-      "icon": "menu-icon tf-icons ti ti-layout-kanban",
-      "slug": "app-ecommerce-dashboard"
-    },
-    {
-      "menuHeader": "Aktivitas Pelanggan"
+      "menuHeader": "Aktivitas Pelanggan",
+      "menuHeaderAccesser": [1, 2, 3]
     },
     {
       "name": "Order",
+      "accesser": [1, 2, 3],
       "icon": "menu-icon tf-icons ti ti-layout-grid",
       "slug": "order",
       "submenu": [
@@ -27,16 +23,18 @@
       ]
     },
     {
-      "menuHeader": "Notifikasi Pelanggan"
+      "menuHeader": "Notifikasi Pelanggan",
+      "menuHeaderAccesser": [1, 2]
     },
     {
       "name": "Push Notifikasi",
+      "accesser": [1, 2],
       "icon": "menu-icon tf-icons ti ti-layout-grid",
       "slug": "notifikasi",
       "submenu": [
         {
-          "url": "app/ecommerce/product/list",
-          "name": "Performa Notifikasi",
+          "url": "performa-notifikasi",
+          "name": "Broadcast",
           "slug": "notifikasi-list"
         },
         {
@@ -52,10 +50,12 @@
       ]
     },
     {
-      "menuHeader": "Master Data"
+      "menuHeader": "Master Data",
+      "menuHeaderAccesser": [1, 2, 3]
     },
     {
       "name": "Data Produk",
+      "accesser": [1, 2],
       "icon": "menu-icon tf-icons ti ti-layout-grid",
       "slug": "produk",
       "submenu": [
@@ -73,6 +73,7 @@
     },
     {
       "name": "Data Pelanggan",
+      "accesser": [1, 2, 3],
       "icon": "menu-icon tf-icons ti ti-users",
       "slug": "pelanggan",
       "submenu": [
@@ -90,6 +91,7 @@
     },
     {
       "name": "Data Akun Karyawan",
+      "accesser": [1, 2],
       "icon": "menu-icon tf-icons ti ti-users",
       "slug": "karyawan",
       "submenu": [

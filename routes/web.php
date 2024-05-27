@@ -63,6 +63,7 @@ use App\Http\Controllers\apps\UserViewNotifications;
 use App\Http\Controllers\apps\UserViewConnections;
 use App\Http\Controllers\apps\AccessRoles;
 use App\Http\Controllers\apps\AccessPermission;
+use App\Http\Controllers\auth\SignInController;
 use App\Http\Controllers\pages\UserProfile;
 use App\Http\Controllers\pages\UserTeams;
 use App\Http\Controllers\pages\UserProjects;
@@ -162,31 +163,43 @@ use App\Http\Controllers\maps\Leaflet;
 use App\Http\Controllers\pelanggan\PelangganController;
 use App\Http\Controllers\produk\MasterProdukController;
 use App\Http\Controllers\notifikasi\MasterPushNotifikasiController;
+use App\Http\Controllers\notifikasi\PerformaNotifikasiController;
 use App\Http\Controllers\order\OrderController;
 
-// Main Page Route
-Route::get('/', [Analytics::class, 'index'])->name('dashboard-analytics');
-Route::get('/dashboard/analytics', [Analytics::class, 'index'])->name('dashboard-analytics');
-Route::get('/dashboard/crm', [Crm::class, 'index'])->name('dashboard-crm');
+use Illuminate\Support\Facades\Auth;
 
-// locale
-Route::get('lang/{locale}', [LanguageController::class, 'swap']);
+Route::get('/', function () {
+    if(Auth::check()){
+        return redirect()->route('dashboard-home');
+    } else{
+        return redirect()->route('sign-in.index');
+    }
+})->name('home');
 
+// Auth
+Route::resource('sign-in', SignInController::class);
+Route::get('sign-out', [SignInController::class, 'signOut'])->name('sign-out');
 
-// Produk
-Route::resource('produk', MasterProdukController::class);
+Route::middleware(['auth'])->group(function () {
+    // Main Page Route
+    Route::get('/dashboard', [Analytics::class, 'index'])->name('dashboard-home');
 
-// Pelanggan
-Route::resource('pelanggan', PelangganController::class);
+    // Produk
+    Route::resource('produk', MasterProdukController::class);
 
-// User Management
-Route::resource('karyawan', KaryawanController::class);
+    // Pelanggan
+    Route::resource('pelanggan', PelangganController::class);
 
-// Notifikasi
-Route::resource('notifikasi', MasterPushNotifikasiController::class);
+    // User Management
+    Route::resource('karyawan', KaryawanController::class);
 
-// Order
-Route::resource('order', OrderController::class);
+    // Notifikasi
+    Route::resource('notifikasi', MasterPushNotifikasiController::class);
+    Route::resource('performa-notifikasi', PerformaNotifikasiController::class);
+
+    // Order
+    Route::resource('order', OrderController::class);
+});
 
 // layout
 Route::get('/layouts/collapsed-menu', [CollapsedMenu::class, 'index'])->name('layouts-collapsed-menu');

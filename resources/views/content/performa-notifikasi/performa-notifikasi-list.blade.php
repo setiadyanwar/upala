@@ -26,7 +26,7 @@
 
 @section('content')
 <h4 class="py-3 mb-4">
-  <span class="text-muted fw-light">Pelanggan /</span> List Pelanggan
+  <span class="text-muted fw-light">Broadcast /</span> Riwayat Broadcast
 </h4>
 
 <!-- Product List Widget -->
@@ -38,7 +38,7 @@
         <div class="col-sm-6 col-lg-3">
           <div class="d-flex justify-content-between align-items-start card-widget-1 border-end pb-3 pb-sm-0">
             <div>
-              <h6 class="mb-2">Jumlah Pelanggan</h6>
+              <h6 class="mb-2">Jumlah Batch Broadcast Dikirim</h6>
               <h4 class="mb-2">{{ $count ?? 0 }}</h4>
               <!-- <p class="mb-0"><span class="text-muted me-2">5k orders</span><span class="badge bg-label-success">+5.7%</span></p> -->
             </div>
@@ -99,15 +99,15 @@
     </div>
   </div>
   <div class="card-datatable table-responsive">
-    <table class="datatables-pelanggan table" id="datatables-pelanggan">
+    <table class="datatables-notifikasi table" id="datatables-performa-notifikasi">
       <thead class="border-top">
         <tr>
           <th></th>
           <th></th>
-          <th>Nama</th>
-          <th>Email</th>
-          <th>Nomor Telepon</th>
-          <th>actions</th>
+          <th>Tanggal</th>
+          <th>Tipe Broadcast</th>
+          <th>Template Notifikasi</th>
+          <th>Dikirim ke</th>
         </tr>
       </thead>
     </table>

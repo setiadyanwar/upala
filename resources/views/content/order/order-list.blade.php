@@ -39,7 +39,7 @@
           <div class="d-flex justify-content-between align-items-start card-widget-1 border-end pb-3 pb-sm-0">
             <div>
               <h6 class="mb-2">Jumlah Order</h6>
-              <h4 class="mb-2">20</h4>
+              <h4 class="mb-2">{{ $count ?? 0 }}</h4>
               <!-- <p class="mb-0"><span class="text-muted me-2">5k orders</span><span class="badge bg-label-success">+5.7%</span></p> -->
             </div>
             <span class="avatar me-sm-4">

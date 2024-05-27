@@ -16,7 +16,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('content.order.order-list');
+        $count = CustomerBill::count();
+        return view('content.order.order-list', compact('count'));
     }
 
     /**

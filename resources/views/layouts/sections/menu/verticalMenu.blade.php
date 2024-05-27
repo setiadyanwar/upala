@@ -7,11 +7,10 @@ $configData = Helper::appClasses();
   <!-- ! Hide app brand if navbar-full -->
   @if(!isset($navbarFull))
   <div class="app-brand demo">
-    <a href="{{url('/')}}" class="app-brand-link">
-      <span class="app-brand-logo demo">
-        @include('_partials.macros',["height"=>20])
+    <a href="{{route('home')}}" class="app-brand-link">
+      <span class="">
+        @include('_partials.macros',["height"=>50])
       </span>
-      <span class="app-brand-text demo menu-text fw-bold">{{config('variables.templateName')}}</span>
     </a>
 
     <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
@@ -31,9 +30,11 @@ $configData = Helper::appClasses();
 
     {{-- menu headers --}}
     @if (isset($menu->menuHeader))
+    @if(isset($menu->menuHeaderAccesser) && in_array(session('user')->role_id, $menu->menuHeaderAccesser))
     <li class="menu-header small text-uppercase">
       <span class="menu-header-text">{{ __($menu->menuHeader) }}</span>
     </li>
+    @endif
 
     @else
 
@@ -63,6 +64,7 @@ $configData = Helper::appClasses();
     @endphp
 
     {{-- main menu --}}
+    @if(isset($menu->accesser) && in_array(session('user')->role_id, $menu->accesser))
     <li class="menu-item {{$activeClass}}">
       <a href="{{ isset($menu->url) ? url($menu->url) : 'javascript:void(0);' }}" class="{{ isset($menu->submenu) ? 'menu-link menu-toggle' : 'menu-link' }}" @if (isset($menu->target) and !empty($menu->target)) target="_blank" @endif>
         @isset($menu->icon)
@@ -80,6 +82,7 @@ $configData = Helper::appClasses();
       @include('layouts.sections.menu.submenu',['menu' => $menu->submenu])
       @endisset
     </li>
+    @endif
     @endif
     @endforeach
   </ul>
