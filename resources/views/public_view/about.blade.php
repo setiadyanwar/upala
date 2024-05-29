@@ -1,106 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('public_view/layouts/layouts')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Upala</title>
-    <link rel="stylesheet" href="dist/output.css">
-    <link rel="stylesheet" href="dist/costum.css">
+@section('content')
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-..." crossorigin="anonymous" />
 
-    <!-- ANIMATE CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Swiper js -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- About Content START -->
+<div style="margin: 150px; margin-bottom: -20px; margin-left: 80px;" class="lg:text-6xl text-5xl font-bold mb-4 text-transparent bg-gradient-to-br from-primary to-state bg-clip-text text-left">About</div>
+<main class="container mx-auto mt-4 p-6">
+    <section id="about" class="flex flex-col md:flex-row items-center">
+        <div class="w-full md:w-1/2 p-4">
+            <img src="{{ asset('assets/public_dist/image/about.png') }}" style="margin-left: 40px;" alt="about upala">
+        </div>
+        <div class="w-full md:w-1/2 p-4" style="margin-right: 40px; margin-top: -200px;">
+            <h2 style="margin-left: 250px; transform: translateY(37%);"><img src="{{ asset('assets/public_dist/image/story of.png') }}" alt=""></h2>
+            <h2 class="lg:text-6xl text-5xl font-bold mb-4 text-transparent bg-gradient-to-br from-primary to-state bg-clip-text text-center">Upala Coffee</h2>
+            <p class="text-lg leading-relaxed text-justify">Hadir di sekitar akhir bulan Januari 2022, datangnya Upala turut meramaikan kedai kopi di sepanjang Jalan Kayu Putih Tengah yang terbilang masih sedikit jumlahnya. Upala di kelola oleh 3 orang sahabat yang ingin mencoba bisnis coffee shop dan masih dalam satu naungan dengan Perpaduan Group. </p>
+        </div>
+    </section>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body>
-    <!-- Header START -->
-    <header class="bg-white shadow-lg absolute top-0 left-0 w-full flex items-center z-10">
-        <div class="container">
-            <div class="flex items-center justify-between relative">
-                <div class="px-4">
-                    <a href="#"><img src="dist/image/logo.png" class="py-6 max-w-[120px] lg:max-w-full cursor-pointer"
-                            alt="logo-upala"></a>
-                </div>
-                <div class="flex items-center px-4">
-                    <button id="hamburger" name="hamburger" type="button" class="block lg:hidden ">
-                        <span class="hamburger-line-dark transition duration-300 ease-in-out origin-top-left"></span>
-                        <span class="hamburger-line-dark transition duration-300 ease-in-out"></span>
-                        <span class="hamburger-line-dark transition duration-300 ease-in-out origin-bottom-left"></span>
-                    </button>
-                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg  w-full right-4 top-full 
-                    lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
-                        <ul class="block ml-auto lg:flex text-right">
-                            <li class="group"><a href="index.html"
-                                    class="text-lg text-dark py-2 mx-5 flex group-hover:text-primary">Home</a></li>
-                            <li class="group"><a href="menu.html"
-                                    class="text-lg text-dark py-2 mx-5 flex group-hover:text-primary ">Menu</a>
-                            </li>
-                            <li class="group"><a href="about.html"
-                                    class="text-lg text-dark py-2 mx-5 flex group-hover:text-primary active-link">About</a>
-                            </li>
-                            <li class="group"><a href="contact.html"
-                                    class="text-lg text-dark py-2 mx-5 flex group-hover:text-primary">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
+<!-- Upala Founder START -->
+<section id="founders" class="mt-10">
+    <h2 style="margin-left: 50px; transform: translateY(37%);"><img src="{{ asset('assets/public_dist/image/upala of.png') }}" alt=""></h2>
+    <h2 class="lg:text-6xl text-5xl font-bold mb-6 text-transparent bg-gradient-to-br from-primary to-state bg-clip-text text-left" style="margin-left: 55px;">Founder</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+        <!-- Card 1 -->
+        <div class="relative w-[420px] h-[312px] bg-white rounded-tl-[100px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[100px] shadow border border-gray-400 overflow-visible">
+            <img class="absolute top-[-50px] left-0 right-0 mx-auto w-[200px] h-auto object-cover" src="{{ asset('assets/public_dist/image/founder1.png') }}" alt="Founder 1">
+            <div class="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-center items-center p-4">
+                <h3 class="text-xl font-bold mb-2 text-white text-opacity-90 text-center">Nama Founder 1</h3>
+                <p class="text-white text-opacity-90 text-center">CEO & Co-Founder</p>
             </div>
         </div>
-    </header>
-    <!-- Header END -->
-
-    <!-- About Content START -->
-    <div style="margin: 150px;"
-        class="w-[230px] h-[81px] text-red-500 text-5xl font-bold font-['Montserrat'] leading-[86.40px]">About</div>
-    <main class="container mx-auto mt-10 p-6" style="">
-        <section id="about" class="flex flex-col md:flex-row items-center bg-white rounded-lg">
-            <div class="w-full md:w-1/2 p-4">
-                <img src="dist/image/about.png" alt="Descriptive Alt Text" class="rounded-lg shadow-md">
+        <!-- Card 2 -->
+        <div class="relative w-[420px] h-[312px] bg-white rounded-tl-[100px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[100px] shadow border border-gray-400 overflow-visible">
+            <img class="absolute top-[-50px] left-0 right-0 mx-auto w-[200px] h-auto object-cover" src="{{ asset('assets/public_dist/image/founder2.jpg') }}" alt="Founder 2">
+            <div class="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-center items-center p-4">
+                <h3 class="text-xl font-bold mb-2 text-white text-opacity-90 text-center">Nama Founder 2</h3>
+                <p class="text-white text-opacity-90 text-center">COO & Co-Founder</p>
             </div>
-            <div class="w-full md:w-1/2 p-4">
-                <h2 class="text-red-500 text-7xl font-normal font-['Wiliam Signature'] leading-[86.40px] text-center">
-                    Story of</h2>
-                <h2 class="text-3xl font-bold mb-4 text-center">Upala Coffee</h2>
-                <p class="text-lg leading-relaxed">Hadir di sekitar akhir bulan Januari 2022, datangnya Upala turut meramaikan kedai kopi di sepanjang Jalan Kayu Putih
-                Tengah yang terbilang masih sedikit jumlahnya. Upala di kelola oleh 3 orang sahabat yang ingin mencoba bisnis coffee
-                shop dan masih dalam satu naungan dengan Perpaduan Group.</p>
-            </div>
-        </section>
-        <!-- Other sections can be added here -->
-    </main>
-    <!-- About Content END -->
-
-    <!-- Footer START -->
-    <footer class="bg-white shadow mt-10">
-        <div class="container mx-auto p-6 text-center">
-            <p>&copy; 2024 Upala Coffee. All rights reserved.</p>
         </div>
-    </footer>
-    <!-- Footer END -->
+        <!-- Card 3 -->
+        <div class="relative w-[420px] h-[312px] bg-white rounded-tl-[100px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[100px] shadow border border-gray-400 overflow-visible">
+            <img class="absolute top-[-50px] left-0 right-0 mx-auto w-[200px] h-auto object-cover" src="{{ asset('assets/public_dist/image/founder3.png') }}" alt="Founder 3">
+            <div class="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-center items-center p-4">
+                <h3 class="text-xl font-bold mb-2 text-white text-opacity-90 text-center">Nama Founder 3</h3>
+                <p class="text-white text-opacity-90 text-center">CTO & Co-Founder</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Upala Founder END -->
 
-    <!-- JS -->
-    <script src="dist/js/script.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</body>
 
-</html>
+
+
+
+</main>
+<!-- About Content END -->
+
+@endsection

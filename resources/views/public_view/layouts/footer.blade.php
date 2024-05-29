@@ -1,11 +1,42 @@
-<!-- JS -->
-<script src="{{ asset('assets/public_dist/js/script.js') }}"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<footer class="bottom-0 left-0 w-full flex items-center z-10" style="padding-top: 12rem; margin-top: 9rem; background-color: #AA4128;">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+            <div class="lg:px-4 lg:col-span-4">
+                <a href="#"><img src="{{ asset('assets/public_dist/image/logo-upala-white.png') }}" class="py-6 max-w-[120px] lg:max-w-full cursor-pointer" alt="logo-upala"></a>
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam mollitia ipsa soluta debitis aliquid illum nulla velit aut unde repudiandae, assumenda dolores laudantium ut, labore optio corrupti beatae tempora eius!</p>
+            </div>
+            <div class="lg:col-start-7 lg:col-span-6 px-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div>
+                        <h3 class="my-5 text-2xl tracking-wide text-white">Links</h3>
+                        <ul class="text-white">
+                            <li class="my-2"><a href="{{ route('public-home') }}" class="text-white font-extralight text-lg">Home</a></li>
+                            <li class="my-2"><a href="{{ route('public-menu') }}" class="text-white font-extralight text-lg">Menu</a></li>
+                            <li class="my-2"><a href="{{ route('public-about') }}" class="text-white font-extralight text-lg">About</a></li>
+                            <li class="my-2"><a href="{{ route('public-kontak') }}" class="text-white font-extralight text-lg">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="my-5 text-2xl tracking-wide text-white">Resource</h3>
+                        <ul class="text-white">
+                            <li class="my-2"><a href="{{ route('public-home') }}" class="text-white font-extralight text-lg">Support Center</a></li>
+                            <li class="my-2"><a href="{{ route('public-menu') }}" class="text-white font-extralight text-lg">Pricing</a></li>
+                            <li class="my-2"><a href="{{ route('public-about') }}" class="text-white font-extralight text-lg">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="my-5 text-2xl tracking-wide text-white">Company</h3>
+                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam mollitia ipsa soluta debitis aliquid illum nulla velit aut unde repudiandae, assumenda dolores laudantium ut, labore optio corrupti beatae tempora eius!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-gray-400 my-6">
+        <div class="flex items-center justify-center">
+            <span class="text-white text-lg my-12">
+                © copyright upala coffee 2024. All Right Reserved
+            </span>
+        </div>
+    </div>
+</footer>

@@ -20,6 +20,10 @@ Route::get('/', function(){
     return view('public_view.index', compact('navcolor'));
 })->name('public-home');
 
+Route::get('/tentang-kami', function(){
+    return view('public_view.about');
+})->name('public-about');
+
 Route::get('/kontak', function(){
     return view('public_view.contact');
 })->name('public-kontak');

@@ -9,7 +9,9 @@
     @include('public_view.layouts.navbar')
 
     @yield('content')
+
+    @include('public_view.layouts.footer')
 </body>
-@include('public_view.layouts.footer')
+@include('public_view.layouts.script')
 
 </html>

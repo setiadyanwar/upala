@@ -198,10 +198,10 @@
 
    <!-- TESTIMONIAL SECTION START -->
 <section id="testimonials" class="relative mt-14">
-    <div class="container mx-auto flex flex-wrap">
+    <div class="flex flex-wrap grid grid-cols-12">
         <!-- Photo Slider Column -->
-        <div class="w-full lg:w-1/2 px-4">
-            <div class="swiper-container">
+        <div class="col-span-12 lg:col-span-5">
+            <!-- <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="{{ asset('assets/public_dist/image/upala-toko.png') }}" alt="Testimonial Image 1" class="w-full rounded-lg object-cover">
@@ -213,38 +213,85 @@
                         <img src="{{ asset('assets/public_dist/image/testimonial3.png') }}" alt="Testimonial Image 3" class="w-full rounded-lg object-cover">
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <img class="w-auto h-auto mb-4" src="{{ asset('assets/public_dist/image/testimonial.png') }}">
         </div>
         
         <!-- Testimonial Text Column -->
-        <div class="w-full lg:w-1/2 px-4">
-            <h2 class="text-4xl font-extrabold text-primary mb-4">Yang Mereka Katakan <br> Tentang Upala</h2>
-            <div class="flex items-center mb-6">
+        <div class="col-span-12 lg:col-span-7 px-4">
+            <h2 class="text-6xl font-extrabold text-primary mb-4 tracking-wide">Yang Mereka Katakan <br> Tentang Upala</h2>
+            <div class="flex items-center my-6 ">
                 <span class="text-3xl font-bold">4.9</span>
                 <i class="fas fa-star text-yellow-500 mx-2 text-3xl"></i>
                 <span class="text-xl">/ 5.0</span>
             </div>
-            <div class="mb-4">
-                <div class="rating-bar" style="background-color: #f0f0f0; height: 20px; border-radius: 5px; margin-bottom: 5px;">
-                    <div class="rating-bar-fill" style="background-color: #ffc107; height: 100%; border-radius: 5px; width: 85%;"></div>
-                </div>
-                <div class="rating-bar" style="background-color: #f0f0f0; height: 20px; border-radius: 5px; margin-bottom: 5px;">
-                    <div class="rating-bar-fill" style="background-color: #ffc107; height: 100%; border-radius: 5px; width: 10%;"></div>
-                </div>
-                <div class="rating-bar" style="background-color: #f0f0f0; height: 20px; border-radius: 5px; margin-bottom: 5px;">
-                    <div class="rating-bar-fill" style="background-color: #ffc107; height: 100%; border-radius: 5px; width: 3%;"></div>
-                </div>
-                <div class="rating-bar" style="background-color: #f0f0f0; height: 20px; border-radius: 5px; margin-bottom: 5px;">
-                    <div class="rating-bar-fill" style="background-color: #ffc107; height: 100%; border-radius: 5px; width: 1%;"></div>
-                </div>
-                <div class="rating-bar" style="background-color: #f0f0f0; height: 20px; border-radius: 5px; margin-bottom: 5px;">
-                    <div class="rating-bar-fill" style="background-color: #ffc107; height: 100%; border-radius: 5px; width: 1%;"></div>
-                </div>
-            </div>
-            
-            <div class="swiper-container">
+            <table class="w-3/4">
+                <tr class="my-4 py-4">
+                    <td class="pr-4">
+                        <div class="grid grid-cols-12 flex items-end gap-5">
+                            <div class="col-span-1 flex items-center">
+                                <span class="text-lg">5</span>
+                                <i class="fas fa-star text-yellow-500 ml-1"></i>
+                            </div>
+                            <div class="col-span-11 bg-rose-200 h-5 rounded-full mb-1.5">
+                                <div class="bg-primary h-full rounded-full" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pr-4">
+                        <div class="grid grid-cols-12 flex items-end gap-5">
+                            <div class="col-span-1 flex items-center">
+                                <span class="text-lg">2</span>
+                                <i class="fas fa-star text-yellow-500 ml-1"></i>
+                            </div>
+                            <div class="col-span-11 bg-rose-200 h-5 rounded-full mb-1.5">
+                                <div class="bg-primary h-full rounded-full" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="my-4 py-4">
+                    <td class="pr-4">
+                        <div class="grid grid-cols-12 flex items-end gap-5">
+                            <div class="col-span-1 flex items-center">
+                                <span class="text-lg">4</span>
+                                <i class="fas fa-star text-yellow-500 ml-1"></i>
+                            </div>
+                            <div class="col-span-11 bg-rose-200 h-5 rounded-full mb-1.5">
+                                <div class="bg-primary h-full rounded-full" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pr-4">
+                        <div class="grid grid-cols-12 flex items-end gap-5">
+                            <div class="col-span-1 flex items-center">
+                                <span class="text-lg">1</span>
+                                <i class="fas fa-star text-yellow-500 ml-1"></i>
+                            </div>
+                            <div class="col-span-11 bg-rose-200 h-5 rounded-full mb-1.5">
+                                <div class="bg-primary h-full rounded-full" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="my-4 py-4">
+                    <td class="pr-4">
+                        <div class="grid grid-cols-12 flex items-end gap-5">
+                            <div class="col-span-1 flex items-center">
+                                <span class="text-lg">3</span>
+                                <i class="fas fa-star text-yellow-500 ml-1"></i>
+                            </div>
+                            <div class="col-span-11 bg-rose-200 h-5 rounded-full mb-1.5">
+                                <div class="bg-primary h-full rounded-full" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="swiper-container my-4 pt-4">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-md">
+                    <div class="swiper-slide bg-white p-4 mx-2 rounded-lg shadow-md">
                         <div class="flex justify-between items-center mb-2">
                             <h4 class="text-xl font-bold">John Doe</h4>
                             <span class="text-sm text-gray-500">1 hari lalu</span>
@@ -258,7 +305,7 @@
                         </div>
                         <p class="text-lg">Upala Coffee adalah tempat terbaik untuk menikmati kopi dan bersantai. Suasananya sangat nyaman dan Instagramable!</p>
                     </div>
-                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-md">
+                    <div class="swiper-slide bg-white p-4 mx-2 rounded-lg shadow-md">
                         <div class="flex justify-between items-center mb-2">
                             <h4 class="text-xl font-bold">Jane Smith</h4>
                             <span class="text-sm text-gray-500">2 hari lalu</span>
@@ -272,7 +319,21 @@
                         </div>
                         <p class="text-lg">Kopi yang enak dengan pelayanan yang ramah. Pasti akan datang lagi!</p>
                     </div>
-                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-md">
+                    <div class="swiper-slide bg-white p-4 mx-2 rounded-lg shadow-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold">Michael Brown</h4>
+                            <span class="text-sm text-gray-500">3 hari lalu</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                        </div>
+                        <p class="text-lg">Tempat yang sangat cozy dan makanan yang lezat. Highly recommended!</p>
+                    </div>
+                    <div class="swiper-slide bg-white p-4 mx-2 rounded-lg shadow-md">
                         <div class="flex justify-between items-center mb-2">
                             <h4 class="text-xl font-bold">Michael Brown</h4>
                             <span class="text-sm text-gray-500">3 hari lalu</span>

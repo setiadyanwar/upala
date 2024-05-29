@@ -16,9 +16,9 @@
                 lg:block lg:static lg:max-w-full lg:shadow-none lg:rounded-none">
                     <ul class="block ml-auto lg:flex text-right">
                         <li class="group"><a href="{{ route('public-home') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary active-link">Home</a></li>
-                        <li class="group"><a href="menu.html" class="text-lg py-2 mx-5 flex group-hover:text-primary">Menu</a></li>
-                        <li class="group"><a href="about.html" class="text-lg py-2 mx-5 flex group-hover:text-primary">About</a></li>
-                        <li class="group"><a href="{{ route('public-kontak') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary">Contact</a></li>
+                        <li class="group"><a href="{{ route('public-menu') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary">Menu</a></li>
+                        <li class="group"><a href="{{ route('public-about') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary">Tentang Kami</a></li>
+                        <li class="group"><a href="{{ route('public-kontak') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary">Kontak</a></li>
                     </ul>
                 </nav>
             </div>
