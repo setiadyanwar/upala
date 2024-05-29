@@ -55,7 +55,26 @@
                                 <!-- Content of the third card -->
                                 <img src="{{ asset('assets/public_dist/image/card2.png') }}" alt="Image 3" class="w-full rounded-lg h-full object-cover">
                             </div>
+                        </div>     
+                        <div class="swiper-slide">
+                            <div class="bg-white w-full h-52 shadow-lg rounded-lg">
+                                <!-- Content of the third card -->
+                                <img src="{{ asset('assets/public_dist/image/card2.png') }}" alt="Image 3" class="w-full rounded-lg h-full object-cover">
+                            </div>
                         </div>                    
+                        <div class="swiper-slide">
+                            <div class="bg-white w-full h-52 shadow-lg rounded-lg">
+                                <!-- Content of the third card -->
+                                <img src="{{ asset('assets/public_dist/image/card2.png') }}" alt="Image 3" class="w-full rounded-lg h-full object-cover">
+                            </div>
+                        </div>     
+                        <div class="swiper-slide">
+                            <div class="bg-white w-full h-52 shadow-lg rounded-lg">
+                                <!-- Content of the third card -->
+                                <img src="{{ asset('assets/public_dist/image/card2.png') }}" alt="Image 3" class="w-full rounded-lg h-full object-cover">
+                            </div>
+                        </div>     
+                        
                     </div>
                 </div>
             </div>
