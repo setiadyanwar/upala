@@ -4,7 +4,7 @@ $customizerHidden = 'customizer-hide';
 
 @extends('layouts/layoutMaster')
 
-@section('title', 'Login Basic - Pages')
+@section('title', 'Login')
 
 @section('vendor-style')
 @vite([
@@ -46,7 +46,7 @@ $customizerHidden = 'customizer-hide';
             </a>
           </div>
           <!-- /Logo -->
-          <h4 class="mb-1 pt-2">Login ke Upala CRM! 👋</h4>
+          <h4 class="mb-1 pt-2">Login ke Upala CMS! 👋</h4>
           <p class="mb-4">Silahkan Masukkan Email dan Password</p>
 
           <form id="formAuthentication" class="mb-3" action="{{ route('sign-in.store') }}" method="POST">

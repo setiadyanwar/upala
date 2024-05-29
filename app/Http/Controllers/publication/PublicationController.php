@@ -165,7 +165,7 @@ class PublicationController extends Controller
     }
 
     public function api_get_publikasi(){
-        $publikasi = Publication::select('id', 'title', 'short_description', 'thumbnail', 'created_at')->get();
+        $publikasi = Publication::select('id', 'type', 'times_visited', 'title', 'short_description', 'thumbnail', 'created_at')->get();
         return response()->json(['data' => $publikasi]);
     }
  
