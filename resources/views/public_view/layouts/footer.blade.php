@@ -38,9 +38,9 @@
             </div>
         </div>
 
-        <hr class="border-gray-400 my-6">
+        <hr class="border-gray-400 mt-16">
         <div class="flex items-center justify-center">
-            <span class="text-white text-lg my-12">
+            <span class="text-white text-lg my-8">
                 © copyright upala coffee 2024. All Right Reserved
             </span>
         </div>
