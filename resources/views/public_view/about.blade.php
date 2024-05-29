@@ -23,32 +23,42 @@
     <h2 class="lg:text-6xl text-5xl font-bold mb-6 text-transparent bg-gradient-to-br from-primary to-state bg-clip-text text-left" style="margin-left: 55px;">Founder</h2>
     <div class="flex flex-wrap justify-center gap-6">
         <!-- Card 1 -->
-        <div class="relative w-[420px] h-[312px] bg-white rounded-tl-[100px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[100px] shadow border border-gray-400 overflow-visible">
-            <img class="absolute top-[-50px] left-0 right-0 mx-auto w-[200px] h-auto object-cover" src="{{ asset('assets/public_dist/image/founder1.png') }}" alt="Founder 1">
-            <div class="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-center items-center p-4">
-                <h3 class="text-xl font-bold mb-2 text-white text-opacity-90 text-center">Nama Founder 1</h3>
-                <p class="text-white text-opacity-90 text-center">CEO & Co-Founder</p>
+        <div class="relative w-[420px] h-[312px] bg-white rounded-tl-[100px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[100px] shadow border border-gray-400 overflow-hidden founder-card">
+            <img class="w-full h-full object-cover" src="{{ asset('assets/public_dist/image/masmas.jpg') }}" alt="Founder 1">
+            <div class="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-end p-4 founder-info">
+                <h3 class="text-xl font-bold mb-2 text-white text-opacity-90 text-center">Ridho Fauzan Aziz</h3>
+                <p class="text-white text-opacity-90 text-center">Manager</p>
             </div>
         </div>
         <!-- Card 2 -->
-        <div class="relative w-[420px] h-[312px] bg-white rounded-tl-[100px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[100px] shadow border border-gray-400 overflow-visible">
-            <img class="absolute top-[-50px] left-0 right-0 mx-auto w-[200px] h-auto object-cover" src="{{ asset('assets/public_dist/image/founder2.jpg') }}" alt="Founder 2">
-            <div class="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-center items-center p-4">
-                <h3 class="text-xl font-bold mb-2 text-white text-opacity-90 text-center">Nama Founder 2</h3>
-                <p class="text-white text-opacity-90 text-center">COO & Co-Founder</p>
+        <div class="relative w-[420px] h-[312px] bg-white rounded-tl-[100px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[100px] shadow border border-gray-400 overflow-hidden founder-card">
+            <img class="w-full h-full object-cover" src="{{ asset('assets/public_dist/image/mas2.jpg') }}" alt="Founder 2">
+            <div class="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-end p-4 founder-info">
+                <h3 class="text-xl font-bold mb-2 text-white text-opacity-90 text-center">Ridho Fauzan Aziz</h3>
+                <p class="text-white text-opacity-90 text-center">Manager</p>
             </div>
         </div>
         <!-- Card 3 -->
-        <div class="relative w-[420px] h-[312px] bg-white rounded-tl-[100px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[100px] shadow border border-gray-400 overflow-visible">
-            <img class="absolute top-[-50px] left-0 right-0 mx-auto w-[200px] h-auto object-cover" src="{{ asset('assets/public_dist/image/founder3.png') }}" alt="Founder 3">
-            <div class="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-center items-center p-4">
-                <h3 class="text-xl font-bold mb-2 text-white text-opacity-90 text-center">Nama Founder 3</h3>
-                <p class="text-white text-opacity-90 text-center">CTO & Co-Founder</p>
+        <div class="relative w-[420px] h-[312px] bg-white rounded-tl-[100px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[100px] shadow border border-gray-400 overflow-hidden founder-card">
+            <img class="w-full h-full object-cover" src="{{ asset('assets/public_dist/image/mas3.jpg') }}" alt="Founder 3">
+            <div class="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-end p-4 founder-info">
+                <h3 class="text-xl font-bold mb-2 text-white text-opacity-90 text-center">Ridho Fauzan Aziz</h3>
+                <p class="text-white text-opacity-90 text-center">Manager</p>
             </div>
         </div>
     </div>
 </section>
 <!-- Upala Founder END -->
+
+<style>
+.founder-card:hover .founder-info {
+    background: linear-gradient(to top, rgba(252, 99, 63, 0.8) 0%, rgba(252, 99, 63, 0.6) 5%, rgba(0, 0, 0, 0) 100%);
+    background-opacity: 1;
+    transition: background 0.3s ease;
+}
+
+</style>
+
 
 
 
