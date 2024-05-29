@@ -101,6 +101,200 @@
     </section>
     <!-- STORY UPALA FINISH -->
 
+    <!-- BERITA SECTION START -->
+    <section id="top-menu" class="relative">
+        <img class="w-full" src="{{ asset('assets/public_dist/image/news-typo.png') }}" >
+        <h2 class="absolute top-10 right-24 text-[72px] font-extrabold text-primary mt-11 ml-6">Upala News</h2>
+        <div class="container relative overflow-hidden flex flex-wrap mt-72 lg:mt-24 pt-5">
+            <div class="w-full px-4 mb-10 lg:w-1/2 pl-4">
+                <a href="">
+                    <img class="w-full h-auto mb-4 " src="{{ asset('storage/publikasi/1716979508.png') }}" >
+                    <h5 class="font-medium text-3xl mb-1 tracking-wide">Spesial Ramadhan</h5>
+                    <span class="font-light tracking-wide"><i class="fa fa-calendar"></i> Ditambahkan pada: 2024-12-12</span>
+                    <p class="text-md mt-3 font-extralight text-justify ">
+                        Hadir di sekitar akhir bulan Januari 2022, datangnya Upala turut meramaikan kedai kopi di sepanjang Jalan Kayu Putih Tengah yang terbilang masih sedikit jumlahnya. Upala di kelola oleh 3 orang sahabat yang ingin mencoba bisnis coffee shop dan masih dalam satu naungan dengan Perpaduan Group.
+                    </p>
+                    <span class="inline-block py-2 text-primary">Read More</span>
+                </a>
+
+            </div>
+
+            <style>
+                .max200 {
+                    max-width: 200px;
+                }
+
+                @media (max-width: 1024px) {
+                    .max200 {
+                        max-width: fit-content;
+                    }
+                }   
+            </style>
+
+            
+            <div class="w-full lg:px-4 lg:w-1/2 pr-4 grid-cols-12">
+                <div class="swiper-container grid-cols-12 col-span-12" style="max-width:fit-content;">
+
+                    <div class="swiper-slide col-span-12">
+                        
+                        <a href="">
+                            <div class="w-full px-4 mb-10 pl-4 flex flex-col lg:flex-row">
+                                <img class="w-full h-auto mb-4 max200" src="{{ asset('storage/publikasi/1716979508.png') }}">
+                                <div class="lg:ml-4">
+                                    <h5 class="font-medium text-2xl mb-1 tracking-wide">Spesial Ramadhan</h5>
+                                    <p class="text-sm mt-3 font-extralight text-justify">
+                                        Hadir di sekitar akhir bulan Januari 2022, datangnya Upala turut meramaikan kedai kopi di sepanjang Jalan Kayu Putih Tengah yang terbilang masih sedikit jumlahnya. Upala di kelola oleh 3 orang sahabat yang ingin mencoba bisnis coffee shop dan masih dalam satu naungan dengan Perpaduan Group.
+                                    </p>
+                                    <span class="inline-block py-2 text-primary">Read More</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="w-full px-4 mb-10 pl-4 flex flex-col lg:flex-row">
+                                <img class="w-full h-auto mb-4 max200" src="{{ asset('storage/publikasi/1716979508.png') }}">
+                                <div class="lg:ml-4">
+                                    <h5 class="font-medium text-2xl mb-1 tracking-wide">Spesial Ramadhan</h5>
+                                    <p class="text-sm mt-3 font-extralight text-justify">
+                                        Hadir di sekitar akhir bulan Januari 2022, datangnya Upala turut meramaikan kedai kopi di sepanjang Jalan Kayu Putih Tengah yang terbilang masih sedikit jumlahnya. Upala di kelola oleh 3 orang sahabat yang ingin mencoba bisnis coffee shop dan masih dalam satu naungan dengan Perpaduan Group.
+                                    </p>
+                                    <span class="inline-block py-2 text-primary">Read More</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="w-full px-4 mb-10 pl-4 flex flex-col lg:flex-row">
+                                <img class="w-full h-auto mb-4 max200" src="{{ asset('storage/publikasi/1716979508.png') }}">
+                                <div class="lg:ml-4">
+                                    <h5 class="font-medium text-2xl mb-1 tracking-wide">Spesial Ramadhan</h5>
+                                    <p class="text-sm mt-3 font-extralight text-justify">
+                                        Hadir di sekitar akhir bulan Januari 2022, datangnya Upala turut meramaikan kedai kopi di sepanjang Jalan Kayu Putih Tengah yang terbilang masih sedikit jumlahnya. Upala di kelola oleh 3 orang sahabat yang ingin mencoba bisnis coffee shop dan masih dalam satu naungan dengan Perpaduan Group.
+                                    </p>
+                                    <span class="inline-block py-2 text-primary">Read More</span>
+                                </div>
+                            </div>
+                        </a>
+   
+                        
+                    </div>
+
+                </div>
+                <!-- <div class="grid grid-cols-12 flex justify-center">
+                    <div class="col-span-4"></div>
+                    <div class="col-span-4">
+                        <a href="#" class="block mt-4 px-6 py-2 bg-primary text-white rounded-full text-center">Read More</a>
+                    </div>
+                    <div class="col-span-4"></div>
+                </div> -->
+
+
+            </div>
+
+
+        </div>
+    </section>
+    <!-- BERITA SECTION FINISH -->
+
+   <!-- TESTIMONIAL SECTION START -->
+<section id="testimonials" class="relative mt-14">
+    <div class="container mx-auto flex flex-wrap">
+        <!-- Photo Slider Column -->
+        <div class="w-full lg:w-1/2 px-4">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{{ asset('assets/public_dist/image/upala-toko.png') }}" alt="Testimonial Image 1" class="w-full rounded-lg object-cover">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('assets/public_dist/image/testimonial2.png') }}" alt="Testimonial Image 2" class="w-full rounded-lg object-cover">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('assets/public_dist/image/testimonial3.png') }}" alt="Testimonial Image 3" class="w-full rounded-lg object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonial Text Column -->
+        <div class="w-full lg:w-1/2 px-4">
+            <h2 class="text-4xl font-extrabold text-primary mb-4">Yang Mereka Katakan <br> Tentang Upala</h2>
+            <div class="flex items-center mb-6">
+                <span class="text-3xl font-bold">4.9</span>
+                <i class="fas fa-star text-yellow-500 mx-2 text-3xl"></i>
+                <span class="text-xl">/ 5.0</span>
+            </div>
+            <div class="mb-4">
+                <div class="rating-bar" style="background-color: #f0f0f0; height: 20px; border-radius: 5px; margin-bottom: 5px;">
+                    <div class="rating-bar-fill" style="background-color: #ffc107; height: 100%; border-radius: 5px; width: 85%;"></div>
+                </div>
+                <div class="rating-bar" style="background-color: #f0f0f0; height: 20px; border-radius: 5px; margin-bottom: 5px;">
+                    <div class="rating-bar-fill" style="background-color: #ffc107; height: 100%; border-radius: 5px; width: 10%;"></div>
+                </div>
+                <div class="rating-bar" style="background-color: #f0f0f0; height: 20px; border-radius: 5px; margin-bottom: 5px;">
+                    <div class="rating-bar-fill" style="background-color: #ffc107; height: 100%; border-radius: 5px; width: 3%;"></div>
+                </div>
+                <div class="rating-bar" style="background-color: #f0f0f0; height: 20px; border-radius: 5px; margin-bottom: 5px;">
+                    <div class="rating-bar-fill" style="background-color: #ffc107; height: 100%; border-radius: 5px; width: 1%;"></div>
+                </div>
+                <div class="rating-bar" style="background-color: #f0f0f0; height: 20px; border-radius: 5px; margin-bottom: 5px;">
+                    <div class="rating-bar-fill" style="background-color: #ffc107; height: 100%; border-radius: 5px; width: 1%;"></div>
+                </div>
+            </div>
+            
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold">John Doe</h4>
+                            <span class="text-sm text-gray-500">1 hari lalu</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                        </div>
+                        <p class="text-lg">Upala Coffee adalah tempat terbaik untuk menikmati kopi dan bersantai. Suasananya sangat nyaman dan Instagramable!</p>
+                    </div>
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold">Jane Smith</h4>
+                            <span class="text-sm text-gray-500">2 hari lalu</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                        </div>
+                        <p class="text-lg">Kopi yang enak dengan pelayanan yang ramah. Pasti akan datang lagi!</p>
+                    </div>
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold">Michael Brown</h4>
+                            <span class="text-sm text-gray-500">3 hari lalu</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                        </div>
+                        <p class="text-lg">Tempat yang sangat cozy dan makanan yang lezat. Highly recommended!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- TESTIMONIAL SECTION FINISH -->
+
+
+
     <script>
         window.addEventListener('scroll', function() {
             var navbar = document.getElementById('navbar');

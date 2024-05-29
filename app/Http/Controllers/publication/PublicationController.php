@@ -34,14 +34,22 @@ class PublicationController extends Controller
                 'short_description' => 'required',
                 'content' => 'required',
                 'type' => 'required', 
+                'thumbnail' => 'nullable|sometimes|file|image|mimes:jpeg,png,jpg|max:2048',
             ]);
+
+            if ($request->hasFile('thumbnail')) {
+                $file = $request->file('thumbnail');
+                $filename = time() . '.' . $file->getClientOriginalExtension();
+                $file->storeAs('public/publikasi', $filename); 
+                $validatedData['thumbnail'] = $filename;
+            }
         
             Publication::create([
                 'title' => $validatedData['title'],
                 'short_description' => $validatedData['short_description'],
                 'content' => $validatedData['content'],
                 'type' => $validatedData['type'],
-                'file' => isset($validatedData['file']) ? $validatedData['file'] : null, 
+                'thumbnail' => isset($validatedData['thumbnail']) ? $validatedData['thumbnail'] : null, 
             ]);
         
             return redirect()->route('publikasi.index')->with('success', 'Publication berhasil ditambahkan'); 
@@ -55,9 +63,17 @@ class PublicationController extends Controller
     /**
      * Display the specified resource.
      */
+    
+    // public show publikasi
     public function show(string $id)
     {
-        //
+        $publication = Publication::find($id);
+
+        if($publication == null){
+            return redirect()->route('publikasi.index')->with('error', 'Publikasi tidak ditemukan');
+        }
+
+        return view('content.publikasi.publikasi-detail', compact('publication'));
     }
 
     /**
@@ -81,6 +97,7 @@ class PublicationController extends Controller
                 'short_description' => 'required',
                 'content' => 'required',
                 'type' => 'required', 
+                'thumbnail' => 'nullable|sometimes|file|image|mimes:jpeg,png,jpg|max:2048',
             ]);
     
             $publication = Publication::find($id);
@@ -88,12 +105,28 @@ class PublicationController extends Controller
             if (!$publication) { // Check for publication existence (not null)
                 return redirect()->route('publikasi.index')->with('error', 'Publication not found'); // Adjust route name
             }
+
+            if ($request->hasFile('thumbnail')) {
+                $file = $request->file('thumbnail');
+                $filename = time() . '.' . $file->getClientOriginalExtension();
+                $file->storeAs('public/publikasi', $filename);
+                $validatedData['thumbnail'] = $filename;
+    
+                // Handle old image deletion (optional, based on your needs)
+                if ($publication->file) {
+                    $oldImagePath = storage_path('app/public/publikasi/' . $publication->file);
+                    if (file_exists($oldImagePath)) {
+                        unlink($oldImagePath);
+                    }
+                }
+            }
     
             $publication->update([
                 'title' => $validatedData['title'] ?? $publication->title,
                 'short_description' => $validatedData['short_description'] ?? $publication->short_description,
                 'content' => $validatedData['content'] ?? $publication->content,
                 'type' => $validatedData['type'] ?? $publication->type,
+                'thumbnail' => isset($validatedData['thumbnail']) ? $validatedData['thumbnail'] : $publication->thumbnail, 
             ]);
     
             return redirect()->route('publikasi.index')->with('success', 'Publication updated successfully'); // Adjust route name
@@ -132,7 +165,8 @@ class PublicationController extends Controller
     }
 
     public function api_get_publikasi(){
-        $publikasi = Publication::all();
+        $publikasi = Publication::select('id', 'title', 'short_description', 'thumbnail', 'created_at')->get();
         return response()->json(['data' => $publikasi]);
     }
+ 
 }

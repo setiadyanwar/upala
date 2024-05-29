@@ -24,6 +24,10 @@ Route::get('/kontak', function(){
     return view('public_view.contact');
 })->name('public-kontak');
 
+Route::get('/menu', function(){
+    return view('public_view.menu');
+})->name('public-menu');
+
 // Auth
 Route::prefix('admin')->group(function () {
     Route::resource('sign-in', SignInController::class);
