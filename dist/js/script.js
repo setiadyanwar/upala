@@ -44,13 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
       // Optional parameters
       grabCursor: true,
       slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
+      spaceBetween: 16, // Use the same spacing as defined in Tailwind
+      loop: false,
 
-      // If we need pagination
-      pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-      },
   });
 });

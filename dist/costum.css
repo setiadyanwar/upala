@@ -84,3 +84,38 @@
   transform: scaleX(1);
   opacity: 1;
 }
+
+
+.container-slider {
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+}
+
+.swiper-container {
+  width: 100%;
+  max-width: 320px; /* Width of the card */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Independent image position */
+.independent-img {
+  right: 50%;
+  transform: translateX(50%);
+}
+

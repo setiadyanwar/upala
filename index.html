@@ -72,31 +72,35 @@
     </section>
     <!-- HERO SECTION FINISH -->
 
-    <!-- TOP MENU SECTION START -->
-    <section id="top-menu">
-        <div class="container">
-            <h2 class="text-5xl text-right font-extrabold text-primary">TOP MENU</h2>
-        </div>
-        <div class="container">
-            <!-- Slider main container -->
-            <div class="swiper-container w-80 h-52 relative mt-20 inline-block">
+<!-- TOP MENU SECTION START -->
+<section id="top-menu" class="relative">
+    <div class="container mx-auto">
+        <h2 class="text-5xl text-right font-extrabold text-primary">TOP MENU</h2>
+    </div>
+    <div class="relative mt-8 flex justify-between items-start">
+        <!-- Image positioned on the left -->
+        <img class="z-10 w-60 lg:w-[400px] h-auto" src="dist/image/pelangi.png" alt="">
+
+        <!-- Slider main container positioned on the right with half-width of the container -->
+        <div class="flex-1 ml-auto w-1/2">
+            <div class="swiper-container h-52 relative">
                 <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper space-x-4">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <div class="bg-white w-80 h-52 shadow-lg rounded-lg p-6">
+                        <div class="bg-white w-full h-52 shadow-lg rounded-lg p-6">
                             <!-- Content of the first card -->
                             <p>Content 1</p>
                         </div>
                     </div>
-                    <div class="swiper-slide mx-8">
-                        <div class="bg-white w-80 h-52 shadow-lg rounded-lg p-6">
+                    <div class="swiper-slide">
+                        <div class="bg-white w-full h-52 shadow-lg rounded-lg p-6">
                             <!-- Content of the second card -->
                             <p>Content 2</p>
                         </div>
                     </div>
-                    <div class="swiper-slide ">
-                        <div class="bg-white w-80 h-52 shadow-lg rounded-lg p-6">
+                    <div class="swiper-slide">
+                        <div class="bg-white w-full h-52 shadow-lg rounded-lg p-6">
                             <!-- Content of the third card -->
                             <p>Content 3</p>
                         </div>
@@ -104,9 +108,31 @@
                 </div>
             </div>
         </div>
-        <img class="absolute z-9999 w-60 lg:w-[400px] h-auto -mt-52" src="dist/image/pelangi.png" alt="">
-    </section>
-    <!-- TOP MENU SECTION FINISH -->
+    </div>
+</section>
+<!-- TOP MENU SECTION FINISH -->
+
+<!-- STORY UPALA START -->
+<section class="story relative mt-14">
+    <img class="w-full" src="dist/image/story-typo.png" >
+    <h2 class="absolute top-0 left-12 text-5xl font-extrabold text-primary mt-11 ml-6">STORY UPALA</h2>
+    <div class="container relative overflow-hidden flex flex-wrap mt-24">
+        <div class="w-full px-4 mb-10 lg:w-1/2 pl-4">
+            <img class="w-full h-auto" src="dist/image/upala-toko.png" >
+        </div>
+        <div class="w-full px-4 lg:w-1/2 pr-4">
+            <p class="text-lg leading-relaxed">
+                Hadir di sekitar akhir bulan Januari 2022, datangnya Upala turut meramaikan kedai kopi di sepanjang Jalan Kayu Putih Tengah yang terbilang masih sedikit jumlahnya. Upala di kelola oleh 3 orang sahabat yang ingin mencoba bisnis coffee shop dan masih dalam satu naungan dengan Perpaduan Group.
+            </p>
+            <a href="#" class="inline-block mt-4 px-6 py-2 bg-primary text-white rounded-full">Read More</a>
+        </div>
+    </div>
+</section>
+<!-- STORY UPALA FINISH -->
+
+
+
+
 
 </body>
 <!-- JS -->
