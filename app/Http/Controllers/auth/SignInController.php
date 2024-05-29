@@ -49,7 +49,7 @@ class SignInController extends Controller
             }
 
             // Redirect to the intended destination (e.g., dashboard)
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/admin/dashboard');
         } else {
             // Authentication failed, redirect back to login page with error message
             return redirect()->route('sign-in.index')->with('error', 'Invalid credentials');

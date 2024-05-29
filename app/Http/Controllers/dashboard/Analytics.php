@@ -16,14 +16,14 @@ class Analytics extends Controller
   public function index()
   {
     $statistik = [
-      'total_pengunjung' => CustomerBill::count(),
-      'total_member' => MasterPelanggan::count(),
-      'total_penjualan' => CustomerOrder::count(),
+      'total_pengunjung' => 0,
+      'total_member' => 0,
+      'total_penjualan' => 0,
     ];
 
     $notifikasi = [
-      'total_notifikasi' => PushNotification::count(),
-      'total_notifikasi_terkirim' => NotificationTargetHistory::count(),
+      'total_notifikasi' => 0,
+      'total_notifikasi_terkirim' => 0,
     ];
 
     return view('content.apps.app-ecommerce-dashboard', compact('statistik', 'notifikasi'));

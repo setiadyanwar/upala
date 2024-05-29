@@ -15,7 +15,7 @@
                 <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg w-full right-4 top-full 
                 lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                     <ul class="block ml-auto lg:flex text-right">
-                        <li class="group"><a href="index.html" class="text-lg py-2 mx-5 flex group-hover:text-primary active-link">Home</a></li>
+                        <li class="group"><a href="{{ route('public-home') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary active-link">Home</a></li>
                         <li class="group"><a href="menu.html" class="text-lg py-2 mx-5 flex group-hover:text-primary">Menu</a></li>
                         <li class="group"><a href="about.html" class="text-lg py-2 mx-5 flex group-hover:text-primary">About</a></li>
                         <li class="group"><a href="contact.html" class="text-lg py-2 mx-5 flex group-hover:text-primary">Contact</a></li>

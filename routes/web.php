@@ -15,7 +15,7 @@ Route::get('/', function () {
 })->name('home');
 
 //Public
-Route::get('/public-home', function(){
+Route::get('/', function(){
     return view('public_view.index');
 })->name('public-home');
 
@@ -24,17 +24,19 @@ Route::get('/kontak', function(){
 })->name('public-kontak');
 
 // Auth
-Route::resource('sign-in', SignInController::class);
-Route::get('sign-out', [SignInController::class, 'signOut'])->name('sign-out');
+Route::prefix('admin')->group(function () {
+    Route::resource('sign-in', SignInController::class);
+    Route::get('sign-out', [SignInController::class, 'signOut'])->name('sign-out');
 
-Route::middleware(['auth'])->group(function () {
-    // Main Page Route
-    Route::get('/dashboard', [Analytics::class, 'index'])->name('dashboard-home');
+    Route::middleware(['auth'])->group(function () {
+        // Main Page Route
+        Route::get('/dashboard', [Analytics::class, 'index'])->name('dashboard-home');
 
-    // Produk
-    Route::resource('produk', MasterProdukController::class);
-    
-    // Publikasi
-    Route::resource('publikasi', PublicationController::class);
+        // Produk
+        Route::resource('produk', MasterProdukController::class);
+        
+        // Publikasi
+        Route::resource('publikasi', PublicationController::class);
 
+    });
 });

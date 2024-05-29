@@ -7,7 +7,7 @@ $configData = Helper::appClasses();
   <!-- ! Hide app brand if navbar-full -->
   @if(!isset($navbarFull))
   <div class="app-brand demo">
-    <a href="{{route('home')}}" class="app-brand-link">
+    <a href="{{route('dashboard-home')}}" class="app-brand-link">
       <span class="">
         @include('_partials.macros',["height"=>50])
       </span>
