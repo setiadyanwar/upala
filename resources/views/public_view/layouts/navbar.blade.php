@@ -15,10 +15,10 @@
                 <nav id="nav-menu" class="hidden absolute py-5  shadow-lg rounded-lg w-full right-4 top-full 
                 lg:block lg:static lg:max-w-full lg:shadow-none lg:rounded-none">
                     <ul class="block ml-auto lg:flex text-right">
-                        <li class="group"><a href="{{ route('public-home') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary active-link">Home</a></li>
-                        <li class="group"><a href="{{ route('public-menu') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary">Menu</a></li>
-                        <li class="group"><a href="{{ route('public-about') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary">Tentang Kami</a></li>
-                        <li class="group"><a href="{{ route('public-kontak') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary">Kontak</a></li>
+                        <li class="group"><a href="{{ route('public-home') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary {{ $page == 'home' ? 'active-link' : '' }} ">Home</a></li>
+                        <li class="group"><a href="{{ route('public-menu') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary {{ $page == 'menu' ? 'active-link' : '' }}">Menu</a></li>
+                        <li class="group"><a href="{{ route('public-about') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary {{ $page == 'about' ? 'active-link' : '' }}">Tentang Kami</a></li>
+                        <li class="group"><a href="{{ route('public-kontak') }}" class="text-lg py-2 mx-5 flex group-hover:text-primary {{ $page == 'kontak' ? 'active-link' : '' }}">Kontak</a></li>
                     </ul>
                 </nav>
             </div>

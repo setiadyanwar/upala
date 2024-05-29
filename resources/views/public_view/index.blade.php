@@ -39,12 +39,15 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper space-x-4">
                         <!-- Slides -->
+                        @foreach($menu as $tm)
                         <div class="swiper-slide">
                             <div class="bg-white w-full h-52 shadow-lg rounded-lg">
                                 <!-- Content of the first card -->
                                 <img src="{{ asset('assets/public_dist/image/card1.png') }}" alt="Image 1" class="w-full rounded-lg h-full object-cover">
                             </div>
                         </div>
+                        @endforeach
+                       
                         <div class="swiper-slide">
                             <div class="bg-white w-full h-52 shadow-lg rounded-lg">
                                 <!-- Content of the second card -->

@@ -1,9 +1,9 @@
-<footer class="bottom-0 left-0 w-full flex items-center z-10" style="padding-top: 12rem; margin-top: 9rem; background-color: #AA4128;">
+<footer class="bottom-0 left-0 w-full flex items-center z-10" style="padding-top: 3rem; margin-top: 9rem; background-color: #AA4128;">
     <div class="container mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
             <div class="lg:px-4 lg:col-span-4">
                 <a href="#"><img src="{{ asset('assets/public_dist/image/logo-upala-white.png') }}" class="py-6 max-w-[120px] lg:max-w-full cursor-pointer" alt="logo-upala"></a>
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam mollitia ipsa soluta debitis aliquid illum nulla velit aut unde repudiandae, assumenda dolores laudantium ut, labore optio corrupti beatae tempora eius!</p>
+                <p class="text-white">Upala Coffee <br> #SocialSpace</p>
             </div>
             <div class="lg:col-start-7 lg:col-span-6 px-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -26,7 +26,13 @@
                     </div>
                     <div>
                         <h3 class="my-5 text-2xl tracking-wide text-white">Company</h3>
-                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam mollitia ipsa soluta debitis aliquid illum nulla velit aut unde repudiandae, assumenda dolores laudantium ut, labore optio corrupti beatae tempora eius!</p>
+                        <p class="text-white">Jam Operasional :
+                          <br>
+- Kayu Putih<br>
+12:00-00:00 | EVERYDAY<br>
+-Jatiwaringin<br>
+10:00-01:00 | EVERYDAY<br>
+#SocialSpace</p>
                     </div>
                 </div>
             </div>
