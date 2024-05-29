@@ -16,7 +16,8 @@ Route::get('/', function () {
 
 //Public
 Route::get('/', function(){
-    return view('public_view.index');
+    $navcolor = 'bg-transparent text-white';
+    return view('public_view.index', compact('navcolor'));
 })->name('public-home');
 
 Route::get('/kontak', function(){

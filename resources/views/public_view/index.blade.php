@@ -30,7 +30,7 @@
         </div>
         <div class="relative mt-8 flex justify-between items-start">
             <!-- Image positioned on the left -->
-            <img class="z-10 w-60 lg:w-[400px] h-auto" src="{{ asset('assets/public_dist/image/pelangi.png') }}" alt="">
+            <img class="z-30 w-60 lg:w-[400px] h-auto bg-white" src="{{ asset('assets/public_dist/image/pelangi.png') }}" alt="">
 
             <!-- Slider main container positioned on the right with half-width of the container -->
             <div class="flex-1 ml-auto w-1/2">
@@ -74,7 +74,7 @@
                                 <img src="{{ asset('assets/public_dist/image/card2.png') }}" alt="Image 3" class="w-full rounded-lg h-full object-cover">
                             </div>
                         </div>     
-                        
+
                     </div>
                 </div>
             </div>
@@ -99,6 +99,34 @@
         </div>
     </section>
     <!-- STORY UPALA FINISH -->
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            var navmenu = document.getElementById('nav-menu');
+            var hamburgerLines = document.querySelectorAll('.hamburger-line');
+
+            if (window.scrollY > 650) {
+                navbar.classList.add('text-black', 'bg-white');
+                navmenu.classList.add('text-black', 'bg-white');
+                navbar.classList.remove('text-white', 'bg-transparent');
+                navmenu.classList.remove('text-white', 'bg-transparent');
+                hamburgerLines.forEach(function(line) {
+                    line.style.backgroundColor = 'black';
+                });
+            } else {
+                navbar.classList.add('text-white', 'bg-transparent');
+                navbar.classList.remove('text-black', 'bg-white');
+                navmenu.classList.add('text-white', 'bg-transparent');
+                navmenu.classList.remove('text-black', 'bg-white');
+                hamburgerLines.forEach(function(line) {
+                    line.style.backgroundColor = 'white';
+                });
+            }
+        });
+
+
+    </script>
 
 @endsection
 

@@ -5,7 +5,7 @@
     @include('public_view.layouts.header')
 </head>
 
-<body style="background-color: #fafafa;  overflow-x: hidden;">
+<body id="body" style="background-color: #fafafa;  overflow-x: hidden;">
     @include('public_view.layouts.navbar')
 
     @yield('content')
