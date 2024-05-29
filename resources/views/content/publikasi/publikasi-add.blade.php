@@ -70,9 +70,24 @@
             <input type="text" value="{{ $mode == 'edit' ? $publikasi->title : '' }}" class="form-control" id="ecommerce-product-name" placeholder="Title" name="title" aria-label="Title">
           </div>
           <!-- Short Description -->
-          <div>
+          <div class="mb-3">
             <label class="form-label">Short Description</label>
             <input type="text" value="{{ $mode == 'edit' ? $publikasi->short_description : '' }}" class="form-control" id="ecommerce-product-name" placeholder="Deskripsi Singkat" name="short_description" aria-label="Short Description">
+          </div>
+          <div class="mb-4">
+            <div class=" d-flex justify-content-between align-items-center">
+              <label class="mb-0">Thumbnail Konten</label>
+              <!-- <a href="javascript:void(0);" class="fw-medium">Add media from URL</a> -->
+            </div>
+            <div class="">
+                @if($mode == 'edit')
+                <span>Thumbnail Sekarang:</span> <br>
+                <img src="{{ asset('storage/publikasi/'.$publikasi->thumbnail) }}" alt="Thumbnail" style="width: 130px; height: 100px;"><br>
+                <br>
+                <span>Ganti Thumbnail:</span> <br>
+                @endif
+                <input name="thumbnail" type="file" />
+            </div>
           </div>
           <!-- Description -->
           <div>
@@ -157,7 +172,7 @@
     var quill = new Quill('#ecommerce-category-description', {
       theme: 'snow'
     });
-    quill.root.innerHTML = "{!! $publikasi->content !!}";
+    quill.root.innerHTML = `{!! $publikasi->content !!}`;
     @endif
   });
 

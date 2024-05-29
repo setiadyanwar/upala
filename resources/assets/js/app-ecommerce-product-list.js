@@ -544,7 +544,7 @@ $(function () {
 
   // datatable produk
   var dt_product_table = $('#datatables-produk'),
-    productAdd = baseUrl + 'produk/create',
+    productAdd = baseUrl + 'admin/produk/create',
     categoryObj = {
       0: { title: 'Household' },
       1: { title: 'Office' },
@@ -667,8 +667,8 @@ $(function () {
           render: function (data, type, full, meta) {
             return (
                 '<div class="d-inline-block text-nowrap">' +
-                '<a href="' + baseUrl + 'produk/' + full["id"] + '/edit" class="btn btn-sm btn-icon"><i class="ti ti-edit"></i></a>' +
-                '<form action="' + baseUrl + 'produk/' + full['id'] + '" method="post" class="d-inline">' +
+                '<a href="' + baseUrl + 'admin/produk/' + full["id"] + '/edit" class="btn btn-sm btn-icon"><i class="ti ti-edit"></i></a>' +
+                '<form action="' + baseUrl + 'admin/produk/' + full['id'] + '" method="post" class="d-inline">' +
                 '<input type="hidden" name="_token" class="det-token" value="' + document.querySelector('meta[name="_token"]').getAttribute('content') + '">' +
                 '<input type="hidden" name="_method" value="DELETE">' +
                 '<button type="submit" class="btn btn-sm btn-icon"><i class="ti ti-trash"></i></button>' +
@@ -921,7 +921,7 @@ $(function () {
   // datatable publikasi
 
   var dt_product_table = $('#datatables-publikasi'),
-  publikasiAdd = baseUrl + 'publikasi/create',
+  publikasiAdd = baseUrl + 'admin/publikasi/create',
   categoryObj = {
     0: { title: 'Household' },
     1: { title: 'Office' },
@@ -987,8 +987,8 @@ $(function () {
           render: function (data, type, full, meta) {
             let kategori = {
               1: 'Blog',
-              2: 'Event',
-              3: 'Promo'
+              2: 'Promo',
+              3: 'Event'
             }
             return "<span class='text-truncate d-flex align-items-center'>"+ kategori[data] +"</span>";
           }
@@ -1010,8 +1010,8 @@ $(function () {
           render: function (data, type, full, meta) {
             return (
                 '<div class="d-inline-block text-nowrap">' +
-                '<a href="' + baseUrl + 'publikasi/' + full["id"] + '/edit" class="btn btn-sm btn-icon"><i class="ti ti-edit"></i></a>' +
-                '<form action="' + baseUrl + 'publikasi/' + full['id'] + '" method="post" class="d-inline">' +
+                '<a href="' + baseUrl + 'admin/publikasi/' + full["id"] + '/edit" class="btn btn-sm btn-icon"><i class="ti ti-edit"></i></a>' +
+                '<form action="' + baseUrl + 'admin/publikasi/' + full['id'] + '" method="post" class="d-inline">' +
                 '<input type="hidden" name="_token" class="det-token" value="' + document.querySelector('meta[name="_token"]').getAttribute('content') + '">' +
                 '<input type="hidden" name="_method" value="DELETE">' +
                 '<button type="submit" class="btn btn-sm btn-icon"><i class="ti ti-trash"></i></button>' +

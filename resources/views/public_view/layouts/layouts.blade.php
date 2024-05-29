@@ -5,11 +5,13 @@
     @include('public_view.layouts.header')
 </head>
 
-<body style="background-color: #fafafa;  overflow-x: hidden;">
+<body id="body" style="background-color: #fafafa;  overflow-x: hidden;">
     @include('public_view.layouts.navbar')
 
     @yield('content')
+
+    @include('public_view.layouts.footer')
 </body>
-@include('public_view.layouts.footer')
+@include('public_view.layouts.script')
 
 </html>

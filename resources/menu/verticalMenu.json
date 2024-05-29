@@ -11,22 +11,22 @@
       "slug": "produk",
       "submenu": [
         {
-          "url": "produk",
+          "url": "admin/produk",
           "name": "Landing",
           "slug": "product-list"
         },
         {
-          "url": "produk/create",
+          "url": "admin/produk/create",
           "name": "Menu",
           "slug": "product-add"
         },
         {
-          "url": "produk/create",
+          "url": "admin/produk/create",
           "name": "About",
           "slug": "product-add"
         },
         {
-          "url": "produk/create",
+          "url": "admin/produk/create",
           "name": "Kontak",
           "slug": "product-add"
         }
@@ -43,12 +43,12 @@
       "slug": "produk",
       "submenu": [
         {
-          "url": "produk",
+          "url": "admin/produk",
           "name": "List Produk",
           "slug": "product-list"
         },
         {
-          "url": "produk/create",
+          "url": "admin/produk/create",
           "name": "Tambah Produk",
           "slug": "product-add"
         }
@@ -61,12 +61,12 @@
       "slug": "publikasi",
       "submenu": [
         {
-          "url": "publikasi",
+          "url": "admin/publikasi",
           "name": "List Publikasi",
           "slug": "publikasi-list"
         },
         {
-          "url": "publikasi/create",
+          "url": "admin/publikasi/create",
           "name": "Tambah Publikasi",
           "slug": "publikasi-add"
         }

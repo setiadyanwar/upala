@@ -11,6 +11,7 @@ class Publication extends Model
 
     protected $fillable = [
         'type',
+        'thumbnail',
         'title',
         'short_description',
         'content',
