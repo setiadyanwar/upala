@@ -11,10 +11,11 @@
                 <h1 class="lg:text-6xl text-5xl font-bold mb-4 text-transparent bg-gradient-to-br from-primary to-state bg-clip-text">Welcome to <br> UPALA COFFEE</h1>
                 <p class="lg:text-base text-sm mb-24">Objek wisata kuliner dan tempat nongkrong yang nyaman dan<br>Instagramable di Bekasi</p>
                 <div class="flex items-center justify-center">
-                    <a href="#menu" class="bg-cover bg-center bg-no-repeat text-white py-2 px-6 rounded-full flex items-center justify-center animate-spin-slow" style="background-image: url('dist/image/spin.png'); width: 100px; height: 100px;">
-                      <i class="fas fa-arrow-down text-xl"></i>
-                    </a>
-                  </div>
+                <a href="#menu" class="relative text-white py-2 px-6 rounded-full flex items-center justify-center" style="width: 100px; height: 100px;">
+                    <span class="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-full animate-spin-slow" style="background-image: url({{ asset('assets/public_dist/image/spin.png') }});"></span>
+                    <i class="fas fa-arrow-down text-xl relative z-10"></i>
+                </a>
+            </div>
             </div>
         </div>
         <img class="absolute start-0 bottom-0" src="{{ asset('assets/public_dist/image/typografi.png') }}" >
@@ -26,7 +27,7 @@
     <!-- TOP MENU SECTION START -->
     <section id="top-menu" class="relative">
         <div class="container mx-auto">
-            <h2 class="text-5xl text-center font-extrabold text-primary">TOP MENU</h2>
+            <h2 class="text-5xl text-right font-extrabold text-primary">TOP MENU</h2>
         </div>
         <div class="relative mt-8 flex justify-between items-start">
             <!-- Image positioned on the left -->
