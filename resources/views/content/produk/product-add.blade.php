@@ -69,6 +69,11 @@
             <label class="form-label" for="ecommerce-product-name">Nama</label>
             <input type="text" value="{{ $mode == 'edit' ? $produk->nama : '' }}" class="form-control" id="ecommerce-product-name" placeholder="Product title" name="nama_produk" aria-label="Product title">
           </div>
+
+          <div class="my-3">
+              <label class="form-label" for="ecommerce-product-name">Harga</label>
+              <input type="text" value="{{ $mode == 'edit' ? $produk->harga : '' }}" class="form-control" id="ecommerce-product-name" placeholder="Harga Produk" name="harga" aria-label="Harga Produk">
+            </div>
           <!-- Description -->
           <div>
             <label class="form-label">Description (Optional)</label>
@@ -108,6 +113,7 @@
             <span>Ganti Foto:</span> <br>
             @endif
             <input name="file" type="file" />
+
         </div>
       </div>
       <!-- /Media -->

@@ -36,7 +36,8 @@ class MasterProdukController extends Controller
                 'nama_produk' => 'required',
                 'content' => 'required',
                 'tipe' => 'required',
-                'file' => 'nullable|sometimes|file|image|mimes:jpeg,png,jpg|max:2048'
+                'file' => 'nullable|sometimes|file|image|mimes:jpeg,png,jpg|max:2048',
+                'harga' => 'required',
             ]);
     
             if ($request->hasFile('file')) {
@@ -50,7 +51,8 @@ class MasterProdukController extends Controller
                 'nama' => $validatedData['nama_produk'],
                 'deskripsi' => $validatedData['content'],
                 'tipe' => $validatedData['tipe'],
-                'file' => $validatedData['file']
+                'file' => $validatedData['file'],
+                'harga' => $validatedData['harga'],
             ]);
     
             return redirect()->route('produk.index')->with('success', 'Produk berhasil ditambahkan');
@@ -90,7 +92,8 @@ class MasterProdukController extends Controller
                 'nama_produk' => 'required',
                 'content' => 'required',
                 'tipe' => 'required',
-                'file' => 'nullable|sometimes|file|image|mimes:jpeg,png,jpg|max:2048'
+                'file' => 'nullable|sometimes|file|image|mimes:jpeg,png,jpg|max:2048',
+                'harga' => 'required'
             ]);
     
             $produk = MasterProduk::find($id);
@@ -114,10 +117,11 @@ class MasterProdukController extends Controller
                 }
             }
     
-            $produk->nama = $validatedData['nama_produk'];
-            $produk->deskripsi = $validatedData['content'];
-            $produk->tipe = $validatedData['tipe'];
+            $produk->nama = $validatedData['nama_produk'] ?? $produk->nama;
+            $produk->deskripsi = $validatedData['content'] ?? $produk->deskripsi;
+            $produk->tipe = $validatedData['tipe'] ?? $produk->tipe;
             $produk->file = $validatedData['file'] ?? $produk->file;
+            $produk->harga = $validatedData['harga'] ?? $produk->harga;
             $produk->save();
     
             return redirect()->route('produk.index')->with('success', 'Produk berhasil diubah');

@@ -599,6 +599,7 @@ $(function () {
             var id = full['id'];
             var productBrand = full['nama'];
             var image = full['file'];
+            var harga = full['harga'];
             
             if (image) {
               // For Product image
@@ -625,8 +626,8 @@ $(function () {
               '<h6 class="text-body text-nowrap mb-0">' +
               name +
               '</h6>' +
-              '<small class="text-muted text-truncate d-none d-sm-block">' +
-              productBrand +
+              '<small class="text-muted text-truncate d-none d-sm-block">Rp ' +
+              harga +
               '</small>' +
               '</div>' +
               '</div>';

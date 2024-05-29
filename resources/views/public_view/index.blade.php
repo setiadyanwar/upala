@@ -108,75 +108,37 @@
         <div class="container relative overflow-hidden flex flex-wrap mt-72 lg:mt-24 pt-5">
             <div class="w-full px-4 mb-10 lg:w-1/2 pl-4">
                 <a href="">
-                    <img class="w-full h-auto mb-4 " src="{{ asset('storage/publikasi/1716979508.png') }}" >
-                    <h5 class="font-medium text-3xl mb-1 tracking-wide">Spesial Ramadhan</h5>
-                    <span class="font-light tracking-wide"><i class="fa fa-calendar"></i> Ditambahkan pada: 2024-12-12</span>
+                    <img class="w-full h-auto mb-4 " src="{{ asset('storage/publikasi/'.$latest_publication->thumbnail) }}" >
+                    <h5 class="font-medium text-3xl mb-1 tracking-wide">{{ $latest_publication->title }}</h5>
+                    <span class="font-light tracking-wide"><i class="fa fa-calendar"></i> Ditambahkan pada: {{ $latest_publication->created_at }}</span>
                     <p class="text-md mt-3 font-extralight text-justify ">
-                        Hadir di sekitar akhir bulan Januari 2022, datangnya Upala turut meramaikan kedai kopi di sepanjang Jalan Kayu Putih Tengah yang terbilang masih sedikit jumlahnya. Upala di kelola oleh 3 orang sahabat yang ingin mencoba bisnis coffee shop dan masih dalam satu naungan dengan Perpaduan Group.
+                        {{ $latest_publication->short_description }}
                     </p>
                     <span class="inline-block py-2 text-primary">Read More</span>
                 </a>
 
             </div>
-
-            <style>
-                .max200 {
-                    max-width: 200px;
-                }
-
-                @media (max-width: 1024px) {
-                    .max200 {
-                        max-width: fit-content;
-                    }
-                }   
-            </style>
-
             
             <div class="w-full lg:px-4 lg:w-1/2 pr-4 grid-cols-12">
                 <div class="swiper-container grid-cols-12 col-span-12" style="max-width:fit-content;">
 
                     <div class="swiper-slide col-span-12">
                         
+                        @foreach($latest_three_publications as $lp)
                         <a href="">
                             <div class="w-full px-4 mb-10 pl-4 flex flex-col lg:flex-row">
-                                <img class="w-full h-auto mb-4 max200" src="{{ asset('storage/publikasi/1716979508.png') }}">
+                                <img class="w-full h-auto mb-4 max200" src="{{ asset('storage/publikasi/'.$lp->thumbnail) }}">
                                 <div class="lg:ml-4">
-                                    <h5 class="font-medium text-2xl mb-1 tracking-wide">Spesial Ramadhan</h5>
+                                    <h5 class="font-medium text-2xl mb-1 tracking-wide">{{ $lp->title }}</h5>
                                     <p class="text-sm mt-3 font-extralight text-justify">
-                                        Hadir di sekitar akhir bulan Januari 2022, datangnya Upala turut meramaikan kedai kopi di sepanjang Jalan Kayu Putih Tengah yang terbilang masih sedikit jumlahnya. Upala di kelola oleh 3 orang sahabat yang ingin mencoba bisnis coffee shop dan masih dalam satu naungan dengan Perpaduan Group.
+                                        {{ $lp->short_description }}
                                     </p>
                                     <span class="inline-block py-2 text-primary">Read More</span>
                                 </div>
                             </div>
                         </a>
+                        @endforeach
 
-                        <a href="">
-                            <div class="w-full px-4 mb-10 pl-4 flex flex-col lg:flex-row">
-                                <img class="w-full h-auto mb-4 max200" src="{{ asset('storage/publikasi/1716979508.png') }}">
-                                <div class="lg:ml-4">
-                                    <h5 class="font-medium text-2xl mb-1 tracking-wide">Spesial Ramadhan</h5>
-                                    <p class="text-sm mt-3 font-extralight text-justify">
-                                        Hadir di sekitar akhir bulan Januari 2022, datangnya Upala turut meramaikan kedai kopi di sepanjang Jalan Kayu Putih Tengah yang terbilang masih sedikit jumlahnya. Upala di kelola oleh 3 orang sahabat yang ingin mencoba bisnis coffee shop dan masih dalam satu naungan dengan Perpaduan Group.
-                                    </p>
-                                    <span class="inline-block py-2 text-primary">Read More</span>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="w-full px-4 mb-10 pl-4 flex flex-col lg:flex-row">
-                                <img class="w-full h-auto mb-4 max200" src="{{ asset('storage/publikasi/1716979508.png') }}">
-                                <div class="lg:ml-4">
-                                    <h5 class="font-medium text-2xl mb-1 tracking-wide">Spesial Ramadhan</h5>
-                                    <p class="text-sm mt-3 font-extralight text-justify">
-                                        Hadir di sekitar akhir bulan Januari 2022, datangnya Upala turut meramaikan kedai kopi di sepanjang Jalan Kayu Putih Tengah yang terbilang masih sedikit jumlahnya. Upala di kelola oleh 3 orang sahabat yang ingin mencoba bisnis coffee shop dan masih dalam satu naungan dengan Perpaduan Group.
-                                    </p>
-                                    <span class="inline-block py-2 text-primary">Read More</span>
-                                </div>
-                            </div>
-                        </a>
-   
-                        
                     </div>
 
                 </div>
