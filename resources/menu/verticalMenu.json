@@ -1,51 +1,34 @@
 {
   "menu": [
     {
-      "menuHeader": "Aktivitas Pelanggan",
+      "menuHeader": "Konfigurasi Website",
       "menuHeaderAccesser": [1, 2, 3]
     },
     {
-      "name": "Order",
-      "accesser": [1, 2, 3],
-      "icon": "menu-icon tf-icons ti ti-layout-grid",
-      "slug": "order",
-      "submenu": [
-        {
-          "url": "order",
-          "name": "List Order",
-          "slug": "order-list"
-        },
-        {
-          "url": "order/create",
-          "name": "Tambah Order",
-          "slug": "order-list"
-        }
-      ]
-    },
-    {
-      "menuHeader": "Notifikasi Pelanggan",
-      "menuHeaderAccesser": [1, 2]
-    },
-    {
-      "name": "Push Notifikasi",
+      "name": "Halaman",
       "accesser": [1, 2],
       "icon": "menu-icon tf-icons ti ti-layout-grid",
-      "slug": "notifikasi",
+      "slug": "produk",
       "submenu": [
         {
-          "url": "performa-notifikasi",
-          "name": "Broadcast",
-          "slug": "notifikasi-list"
+          "url": "produk",
+          "name": "Landing",
+          "slug": "product-list"
         },
         {
-          "url": "notifikasi",
-          "name": "List Notifikasi",
-          "slug": "notifikasi-list"
+          "url": "produk/create",
+          "name": "Menu",
+          "slug": "product-add"
         },
         {
-          "url": "notifikasi/create",
-          "name": "Tambah Notifikasi",
-          "slug": "notifikasi-add"
+          "url": "produk/create",
+          "name": "About",
+          "slug": "product-add"
+        },
+        {
+          "url": "produk/create",
+          "name": "Kontak",
+          "slug": "product-add"
         }
       ]
     },
@@ -72,38 +55,20 @@
       ]
     },
     {
-      "name": "Data Pelanggan",
-      "accesser": [1, 2, 3],
-      "icon": "menu-icon tf-icons ti ti-users",
-      "slug": "pelanggan",
-      "submenu": [
-        {
-          "url": "pelanggan",
-          "name": "List Pelanggan",
-          "slug": "pelanggan-list"
-        },
-        {
-          "url": "pelanggan/create",
-          "name": "Tambah Pelanggan",
-          "slug": "pelanggan-add"
-        }
-      ]
-    },
-    {
-      "name": "Data Akun Karyawan",
+      "name": "Data Publikasi",
       "accesser": [1, 2],
-      "icon": "menu-icon tf-icons ti ti-users",
-      "slug": "karyawan",
+      "icon": "menu-icon tf-icons ti ti-layout-grid",
+      "slug": "publikasi",
       "submenu": [
         {
-          "url": "karyawan",
-          "name": "List Akun Karyawan",
-          "slug": "karyawan-list"
+          "url": "publikasi",
+          "name": "List Publikasi",
+          "slug": "publikasi-list"
         },
         {
-          "url": "karyawan/create",
-          "name": "Tambah Akun Karyawan",
-          "slug": "karyawan-add"
+          "url": "publikasi/create",
+          "name": "Tambah Publikasi",
+          "slug": "publikasi-add"
         }
       ]
     }

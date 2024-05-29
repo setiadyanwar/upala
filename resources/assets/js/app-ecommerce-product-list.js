@@ -918,10 +918,10 @@ $(function () {
   }, 300);
 
 
-  // datatable pelanggan
+  // datatable publikasi
 
-  var dt_product_table = $('#datatables-pelanggan'),
-  pelangganAdd = baseUrl + 'pelanggan/create',
+  var dt_product_table = $('#datatables-publikasi'),
+  publikasiAdd = baseUrl + 'publikasi/create',
   categoryObj = {
     0: { title: 'Household' },
     1: { title: 'Office' },
@@ -929,14 +929,14 @@ $(function () {
 
   if (dt_product_table.length) {
     var dt_produk = dt_product_table.DataTable({
-      ajax: baseUrl + 'api/pelanggan', // JSON file to add data
+      ajax: baseUrl + 'api/publikasi', // JSON file to add data
       columns: [
         // columns according to JSON
         { data: 'id' },
         { data: 'id' },
-        { data: 'nama' },
-        { data: 'email' },
-        { data: 'no_telp' },
+        { data: 'title' },
+        { data: 'type' },
+        { data: 'times_visited' },
         { data: '' }
       ],
       columnDefs: [
@@ -968,19 +968,12 @@ $(function () {
           targets: 2,
           responsivePriority: 1,
           render: function (data, type, full, meta) {
-            var name = full['nama'];
-            var id = full['id'];
-            var registered_at = full['registered_at'];
-            
             var rowOutput =
               '<div class="d-flex justify-content-start align-items-center product-name">' +
               '<div class="d-flex flex-column">' +
               '<h6 class="text-body text-nowrap mb-0">' +
-              name +
+              data +
               '</h6>' +
-              '<small class="text-muted text-truncate d-none d-sm-block"> Member Sejak ' +
-              registered_at.split(" ")[0] +
-              '</small>' +
               '</div>' +
               '</div>';
               
@@ -988,19 +981,24 @@ $(function () {
           }
         },
         {
-          // Email
+          // Type
           targets: 3,
           responsivePriority: 5,
           render: function (data, type, full, meta) {
-            return "<span class='text-truncate d-flex align-items-center'>"+ data +"</span>";
+            let kategori = {
+              1: 'Blog',
+              2: 'Event',
+              3: 'Promo'
+            }
+            return "<span class='text-truncate d-flex align-items-center'>"+ kategori[data] +"</span>";
           }
         },
         {
-          // Nomor Telepon
-          targets: 3,
+          // Jumlah Dikunjungi
+          targets: 4,
           responsivePriority: 5,
           render: function (data, type, full, meta) {
-            return "<span class='text-truncate d-flex align-items-center'>"+ data +"</span>";
+            return "<span class='text-truncate d-flex align-items-center'>"+ data +" Kali</span>";
           }
         },
         {
@@ -1012,8 +1010,8 @@ $(function () {
           render: function (data, type, full, meta) {
             return (
                 '<div class="d-inline-block text-nowrap">' +
-                '<a href="' + baseUrl + 'pelanggan/' + full["id"] + '/edit" class="btn btn-sm btn-icon"><i class="ti ti-edit"></i></a>' +
-                '<form action="' + baseUrl + 'pelanggan/' + full['id'] + '" method="post" class="d-inline">' +
+                '<a href="' + baseUrl + 'publikasi/' + full["id"] + '/edit" class="btn btn-sm btn-icon"><i class="ti ti-edit"></i></a>' +
+                '<form action="' + baseUrl + 'publikasi/' + full['id'] + '" method="post" class="d-inline">' +
                 '<input type="hidden" name="_token" class="det-token" value="' + document.querySelector('meta[name="_token"]').getAttribute('content') + '">' +
                 '<input type="hidden" name="_method" value="DELETE">' +
                 '<button type="submit" class="btn btn-sm btn-icon"><i class="ti ti-trash"></i></button>' +
@@ -1179,10 +1177,10 @@ $(function () {
           ]
         },
         {
-          text: '<i class="ti ti-plus me-0 me-sm-1 ti-xs"></i><span class="d-none d-sm-inline-block">Tambah Pelanggan</span>',
+          text: '<i class="ti ti-plus me-0 me-sm-1 ti-xs"></i><span class="d-none d-sm-inline-block">Tambah Publikasi</span>',
           className: 'add-new btn btn-primary ms-2 ms-sm-0 waves-effect waves-light',
           action: function () {
-            window.location.href = pelangganAdd;
+            window.location.href = publikasiAdd;
           }
         }
       ],
