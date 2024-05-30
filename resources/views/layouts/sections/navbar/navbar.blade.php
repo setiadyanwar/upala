@@ -38,12 +38,15 @@ $navbarDetached = ($navbarDetached ?? '');
 
       <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
-        @if(!isset($menuHorizontal))
-     
-        @endif
+        <!-- User -->
         <ul class="navbar-nav flex-row align-items-center ms-auto">
-   
-          <!-- User -->
+            <li class="nav-item">
+            <span class="mr-2">
+              @if (Auth::check())
+              {{ Session::get('user')->email }}
+              @endif
+            </span>
+          </li>
           <li class="nav-item navbar-dropdown dropdown-user dropdown">
             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
               <div class="avatar avatar-online">
