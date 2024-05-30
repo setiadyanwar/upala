@@ -17,5 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" href="{{ asset('assets/public_dist/image/favicon.png') }}" type="image/x-icon">
 
     <script src="https://cdn.tailwindcss.com"></script>
