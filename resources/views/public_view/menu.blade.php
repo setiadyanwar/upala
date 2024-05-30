@@ -2,10 +2,9 @@
 
 @section('content')
 
-    <!-- STORY UPALA START -->
     <section class="story relative mt-28">
         <img class="w-full" src="{{ asset('assets/public_dist/image/menu-typo.png') }}" >
-        <h2 class="absolute top-0 left-10 lg:left-12 text-6xl font-extrabold text-primary mt-24 ml-6">Our Menu</h2>
+        <h2 class="absolute -top-10 left-10 lg:left-12 text-6xl font-extrabold text-primary mt-24 ml-6">Our Menu</h2>
         <div class="grid grid-cols-12 lg:grid-cols-9 justify-center mt-36">
             <div class="col-start-2 col-end-12 lg:col-start-4 lg:col-end-7">
                 <div class="relative self-center bg-orange-400 rounded-full p-0.5 flex">

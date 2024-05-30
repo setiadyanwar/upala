@@ -4,7 +4,11 @@
 
 
 <!-- About Content START -->
-<div style="margin: 150px; margin-bottom: -20px; margin-left: 80px;" class="lg:text-6xl text-5xl font-bold mb-4 text-transparent bg-gradient-to-br from-primary to-state bg-clip-text text-left">About</div>
+<section class="story relative mt-28">
+    <img class="w-full" src="{{ asset('assets/public_dist/image/typo-about.png') }}" >
+    <h2 class="absolute -top-10 left-10 lg:left-12 text-6xl font-extrabold text-primary mt-24 ml-6">About</h2>
+</section>
+        
 <main class="container mx-auto mt-4 p-6">
     <section id="about" class="flex flex-col md:flex-row items-center">
         <div class="w-full md:w-1/2 p-4">

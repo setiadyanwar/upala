@@ -3,7 +3,26 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
             <div class="lg:px-4 lg:col-span-4">
                 <a href="#"><img src="{{ asset('assets/public_dist/image/logo-upala-white.png') }}" class="py-6 max-w-[120px] lg:max-w-full cursor-pointer" alt="logo-upala"></a>
-                <p class="text-white">Upala Coffee <br> #SocialSpace</p>
+                <p class="text-white">Upala Coffee Jatiwaringin Lokasi dan Harga Menu Terbaru Januari 2024– Sebuah cafe baru dengan design bangunan semi industrial kembali hadir di kawasan Jabodetabek. Kali ini cafe baru yang akan Wisatamilenial bahas terletak/berlokasi di kawasan Bekasi. </p>
+                
+                <!-- Social Media Icons -->
+                <div class="flex items-center justify-start space-x-4 mt-4">
+                    <a href="#" class="text-white hover:text-primary transition-colors duration-300">
+                        <div class="rounded-full bg-white p-2 aspect-w-1 aspect-h-1">
+                            <i class="fab fa-instagram text-primary"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary transition-colors duration-300">
+                        <div class="rounded-full bg-white p-2 aspect-w-1 aspect-h-1">
+                            <i class="fab fa-whatsapp text-primary"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary transition-colors duration-300">
+                        <div class="rounded-full bg-white p-2 aspect-w-1 aspect-h-1">
+                            <i class="far fa-envelope text-primary"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
             <div class="lg:col-start-7 lg:col-span-6 px-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -28,17 +47,18 @@
                         <h3 class="my-5 text-2xl tracking-wide text-white">Company</h3>
                         <p class="text-white">Jam Operasional :
                           <br>
-- Kayu Putih<br>
-12:00-00:00 | EVERYDAY<br>
--Jatiwaringin<br>
-10:00-01:00 | EVERYDAY<br>
-#SocialSpace</p>
+                          - Kayu Putih<br>
+                          12:00-00:00 | EVERYDAY<br>
+                          - Jatiwaringin<br>
+                          10:00-01:00 | EVERYDAY<br>
+                          #SocialSpace</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <hr class="border-gray-400 mt-16">
+        
         <div class="flex items-center justify-center">
             <span class="text-white text-lg my-8">
                 © copyright upala coffee 2024. All Right Reserved
